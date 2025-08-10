@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Model Evaluation and Deployment - Data, AI & Machine Learning</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Model Evaluation and Deployment</h1>
+<p>Model Evaluation and Deployment are the final stages of the machine learning lifecycle. Evaluation ensures that models perform reliably, while deployment integrates them into real-world systems for practical use.</p>
+
+<h2>1. Model Evaluation Goals</h2>
+<ul>
+  <li>Measure predictive accuracy and reliability</li>
+  <li>Compare multiple models and select the best</li>
+  <li>Detect overfitting or underfitting</li>
+  <li>Ensure fairness and robustness</li>
+</ul>
+
+<h2>2. Evaluation Techniques</h2>
+<ul>
+  <li><strong>Train-Test Split:</strong> Separate data for training and testing</li>
+  <li><strong>Cross-Validation:</strong> Rotate training/testing across folds</li>
+  <li><strong>Holdout Set:</strong> Final untouched data for unbiased testing</li>
+</ul>
+
+<h2>3. Common Metrics</h2>
+<ul>
+  <li><strong>Classification</strong>
+    <ul>
+      <li>Accuracy</li>
+      <li>Precision</li>
+      <li>Recall</li>
+      <li>F1 Score</li>
+      <li>ROC-AUC</li>
+    </ul>
+  </li>
+  <li><strong>Regression</strong>
+    <ul>
+      <li>Mean Absolute Error (MAE)</li>
+      <li>Mean Squared Error (MSE)</li>
+      <li>Root Mean Squared Error (RMSE)</li>
+      <li>R² Score</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>4. Example: Evaluating a Loan Classifier</h2>
+<pre>
+Model: Decision Tree
+Test Accuracy: 87%
+Precision (Approved): 91%
+Recall (Approved): 85%
+F1 Score: 88%
+ROC-AUC: 0.92
+</pre>
+
+<h2>5. Model Deployment Goals</h2>
+<ul>
+  <li>Make predictions available to users or systems</li>
+  <li>Ensure scalability and reliability</li>
+  <li>Monitor performance and update as needed</li>
+</ul>
+
+<h2>6. Deployment Strategies</h2>
+<ul>
+  <li><strong>Batch Inference:</strong> Run predictions on scheduled data loads</li>
+  <li><strong>Real-Time Inference:</strong> Serve predictions via APIs</li>
+  <li><strong>Embedded Models:</strong> Integrate into mobile or edge devices</li>
+</ul>
+
+<h2>7. Tools & Platforms</h2>
+<ul>
+  <li>Flask / FastAPI (Python web frameworks)</li>
+  <li>Docker (containerization)</li>
+  <li>Kubernetes (orchestration)</li>
+  <li>MLflow (tracking and deployment)</li>
+  <li>TensorFlow Serving / TorchServe</li>
+</ul>
+
+<h2>8. Monitoring & Maintenance</h2>
+<ul>
+  <li>Track prediction drift and data changes</li>
+  <li>Log errors and latency</li>
+  <li>Retrain models periodically</li>
+</ul>
+
+<h2>9. Challenges</h2>
+<ul>
+  <li>Model decay over time</li>
+  <li>Security and privacy concerns</li>
+  <li>Integration with legacy systems</li>
+  <li>Versioning and rollback</li>
+</ul>
+
+<h2>10. Applications</h2>
+<ul>
+  <li>Finance: Credit scoring APIs</li>
+  <li>Retail: Real-time recommendation engines</li>
+  <li>Healthcare: Diagnostic support systems</li>
+  <li>Manufacturing: Predictive maintenance dashboards</li>
+</ul>
+
+</body>
+</html>
