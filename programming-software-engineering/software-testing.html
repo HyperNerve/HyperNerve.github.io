@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Software Testing - Programming & Software Engineering</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Software Testing</h1>
+<p>Software testing is the process of evaluating a software system to detect differences between expected and actual behavior. It ensures reliability, correctness, and performance before deployment.</p>
+
+<h2>1. Goals of Software Testing</h2>
+<ul>
+  <li><strong>Verification:</strong> Ensure software meets specifications</li>
+  <li><strong>Validation:</strong> Ensure software fulfills user needs</li>
+  <li><strong>Defect Detection:</strong> Identify and fix bugs</li>
+  <li><strong>Quality Assurance:</strong> Improve overall software quality</li>
+</ul>
+
+<h2>2. Types of Testing</h2>
+<ul>
+  <li><strong>Manual Testing:</strong> Human testers execute test cases</li>
+  <li><strong>Automated Testing:</strong> Scripts and tools perform tests</li>
+</ul>
+
+<h2>3. Levels of Testing</h2>
+<ul>
+  <li><strong>Unit Testing:</strong> Test individual functions or modules</li>
+  <li><strong>Integration Testing:</strong> Test interactions between modules</li>
+  <li><strong>System Testing:</strong> Test complete system behavior</li>
+  <li><strong>Acceptance Testing:</strong> Validate system against user requirements</li>
+</ul>
+
+<h2>4. Testing Techniques</h2>
+<ul>
+  <li><strong>Black Box Testing:</strong> Test without knowledge of internal code</li>
+  <li><strong>White Box Testing:</strong> Test with full knowledge of internal logic</li>
+  <li><strong>Grey Box Testing:</strong> Partial knowledge of internal structure</li>
+</ul>
+
+<h2>5. Test Case Example</h2>
+<pre>
+Function: add(a, b)
+Test Case:
+  Input: a = 2, b = 3
+  Expected Output: 5
+</pre>
+
+<h2>6. Unit Testing Example (Python)</h2>
+<pre>
+def add(a, b):
+    return a + b
+
+import unittest
+
+class TestMath(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(add(2, 3), 5)
+
+unittest.main()
+</pre>
+
+<h2>7. Test Coverage</h2>
+<ul>
+  <li><strong>Statement Coverage:</strong> Every line of code is executed</li>
+  <li><strong>Branch Coverage:</strong> Every decision path is tested</li>
+  <li><strong>Path Coverage:</strong> All possible execution paths are tested</li>
+</ul>
+
+<h2>8. Regression Testing</h2>
+<ul>
+  <li><strong>Purpose:</strong> Ensure new changes don’t break existing functionality</li>
+  <li><strong>Method:</strong> Re-run previous test cases after updates</li>
+</ul>
+
+<h2>9. Testing Tools</h2>
+<ul>
+  <li><strong>JUnit:</strong> Java unit testing framework</li>
+  <li><strong>PyTest:</strong> Python testing framework</li>
+  <li><strong>Selenium:</strong> Web application testing automation</li>
+  <li><strong>Postman:</strong> API testing and automation</li>
+</ul>
+
+<h2>10. Best Practices</h2>
+<ul>
+  <li><strong>Write Clear Test Cases:</strong> Define inputs, outputs, and conditions</li>
+  <li><strong>Automate Repetitive Tests:</strong> Use scripts for efficiency</li>
+  <li><strong>Test Early and Often:</strong> Catch bugs early in development</li>
+  <li><strong>Use Continuous Integration:</strong> Run tests automatically on code changes</li>
+</ul>
+
+</body>
+</html>
