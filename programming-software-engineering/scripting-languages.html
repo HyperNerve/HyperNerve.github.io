@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scripting Languages - Programming & Software Engineering</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Scripting Languages</h1>
+<p>Scripting languages are high-level programming languages used to automate tasks, manipulate data, and control software environments. They are typically interpreted and emphasize ease of use and rapid development.</p>
+
+<h2>1. Characteristics of Scripting Languages</h2>
+<ul>
+  <li><strong>Interpreted:</strong> Executed line-by-line without compilation</li>
+  <li><strong>Dynamically Typed:</strong> Variable types determined at runtime</li>
+  <li><strong>High-Level Syntax:</strong> Readable and concise code</li>
+  <li><strong>Rapid Development:</strong> Ideal for prototyping and automation</li>
+</ul>
+
+<h2>2. Common Use Cases</h2>
+<ul>
+  <li><strong>System Administration:</strong> Automate OS tasks and configurations</li>
+  <li><strong>Web Development:</strong> Server-side scripting and templating</li>
+  <li><strong>Data Processing:</strong> Parse, transform, and analyze data</li>
+  <li><strong>Application Glue:</strong> Integrate components and APIs</li>
+</ul>
+
+<h2>3. Popular Scripting Languages</h2>
+<ul>
+  <li><strong>Python:</strong> General-purpose scripting with extensive libraries</li>
+  <li><strong>Bash:</strong> Unix shell scripting for system tasks</li>
+  <li><strong>JavaScript:</strong> Client-side scripting for web pages</li>
+  <li><strong>Perl:</strong> Powerful text processing and regex support</li>
+  <li><strong>Ruby:</strong> Elegant syntax and web frameworks</li>
+</ul>
+
+<h2>4. Example: Python Script for File Renaming</h2>
+<pre>
+import os
+
+for filename in os.listdir("."):
+    if filename.endswith(".txt"):
+        new_name = "renamed_" + filename
+        os.rename(filename, new_name)
+</pre>
+
+<h2>5. Example: Bash Script for Backup</h2>
+<pre>
+#!/bin/bash
+tar -czf backup.tar.gz /home/user/documents
+echo "Backup completed."
+</pre>
+
+<h2>6. Example: JavaScript DOM Manipulation</h2>
+<pre>
+document.getElementById("btn").addEventListener("click", function() {
+  alert("Button clicked!");
+});
+</pre>
+
+<h2>7. Strengths of Scripting Languages</h2>
+<ul>
+  <li><strong>Portability:</strong> Run on multiple platforms with minimal changes</li>
+  <li><strong>Flexibility:</strong> Easily integrate with other tools and languages</li>
+  <li><strong>Community Support:</strong> Rich ecosystems and documentation</li>
+</ul>
+
+<h2>8. Limitations</h2>
+<ul>
+  <li><strong>Performance:</strong> Slower than compiled languages for CPU-intensive tasks</li>
+  <li><strong>Security:</strong> Interpreted nature may expose vulnerabilities</li>
+  <li><strong>Scalability:</strong> Less suited for large-scale systems without optimization</li>
+</ul>
+
+<h2>9. Embedding and Extension</h2>
+<ul>
+  <li><strong>Embedded Scripting:</strong> Add scripting to applications (e.g., Lua in games)</li>
+  <li><strong>Extending Languages:</strong> Use C/C++ modules to boost performance</li>
+</ul>
+
+<h2>10. Best Practices</h2>
+<ul>
+  <li><strong>Use Shebang:</strong> Define interpreter in script header</li>
+  <li><strong>Comment Generously:</strong> Improve readability and maintainability</li>
+  <li><strong>Modularize:</strong> Break scripts into reusable functions</li>
+  <li><strong>Validate Inputs:</strong> Prevent errors and security issues</li>
+</ul>
+
+</body>
+</html>
