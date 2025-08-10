@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Digital Logic Design - Computer Systems & Architecture</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
+<h1>Digital Logic Design</h1>
+<p>Digital Logic Design is the study of electronic circuits that operate on discrete signals. It forms the basis of all digital computing systems, enabling arithmetic, control, memory, and communication functions through binary logic.</p>
+
+<h2>1. Number Systems</h2>
+
+<ul>
+  <li><strong>Binary (Base-2):</strong> Digits: 0, 1. Used internally by all digital systems.</li>
+  <li><strong>Octal (Base-8):</strong> Digits: 0–7. Compact representation of binary (3 bits per digit).</li>
+  <li><strong>Decimal (Base-10):</strong> Digits: 0–9. Human-readable format.</li>
+  <li><strong>Hexadecimal (Base-16):</strong> Digits: 0–9, A–F. Compact binary representation (4 bits per digit).</li>
+  <li><strong>Conversions:</strong> Binary ↔ Decimal ↔ Hex ↔ Octal using positional weights.</li>
+</ul>
+
+<h2>2. Boolean Algebra</h2>
+
+<ul>
+  <li><strong>Variables:</strong> Represent binary values (0 or 1).</li>
+  <li><strong>Operators:</strong> AND (·), OR (+), NOT (¬), XOR (⊕), NAND, NOR.</li>
+  <li><strong>Identities:</strong> 
+    <ul>
+      <li>Commutative: A + B = B + A</li>
+      <li>Associative: (A + B) + C = A + (B + C)</li>
+      <li>Distributive: A · (B + C) = A·B + A·C</li>
+      <li>De Morgan’s Laws: ¬(A·B) = ¬A + ¬B</li>
+    </ul>
+  </li>
+  <li><strong>Simplification:</strong> Reduces gate count and improves circuit speed.</li>
+</ul>
+
+<h2>3. Logic Gates</h2>
+
+<table border="1" cellpadding="5">
+  <tr>
+    <th>Gate</th>
+    <th>Symbol</th>
+    <th>Function</th>
+    <th>Truth Table</th>
+  </tr>
+  <tr>
+    <td>AND</td>
+    <td>·</td>
+    <td>1 if both inputs are 1</td>
+    <td>00→0, 01→0, 10→0, 11→1</td>
+  </tr>
+  <tr>
+    <td>OR</td>
+    <td>+</td>
+    <td>1 if any input is 1</td>
+    <td>00→0, 01→1, 10→1, 11→1</td>
+  </tr>
+  <tr>
+    <td>NOT</td>
+    <td>¬</td>
+    <td>Inverts input</td>
+    <td>0→1, 1→0</td>
+  </tr>
+  <tr>
+    <td>XOR</td>
+    <td>⊕</td>
+    <td>1 if inputs differ</td>
+    <td>00→0, 01→1, 10→1, 11→0</td>
+  </tr>
+</table>
+
+<h2>4. Combinational Logic Circuits</h2>
+
+<ul>
+  <li><strong>Definition:</strong> Output depends only on current inputs.</li>
+  <li><strong>Half Adder:</strong> Adds two bits. Outputs: Sum, Carry.</li>
+  <li><strong>Full Adder:</strong> Adds two bits and carry-in. Outputs: Sum, Carry-out.</li>
+  <li><strong>Multiplexer (MUX):</strong> Selects one input from many.</li>
+  <li><strong>Demultiplexer (DEMUX):</strong> Routes input to one of many outputs.</li>
+  <li><strong>Encoder:</strong> Converts active input line to binary code.</li>
+  <li><strong>Decoder:</strong> Converts binary input to active output line.</li>
+</ul>
+
+<h2>5. Sequential Logic Circuits</h2>
+
+<ul>
+  <li><strong>Definition:</strong> Output depends on current inputs and previous states.</li>
+  <li><strong>Flip-Flops:</strong> Memory elements that store 1 bit.
+    <ul>
+      <li>SR Flip-Flop: Set/Reset</li>
+      <li>D Flip-Flop: Data latch</li>
+      <li>JK Flip-Flop: Toggle behavior</li>
+      <li>T Flip-Flop: Toggle on clock</li>
+    </ul>
+  </li>
+  <li><strong>Registers:</strong> Group of flip-flops to store multi-bit values.</li>
+  <li><strong>Counters:</strong> Sequential circuits that increment/decrement values.</li>
+  <li><strong>FSM (Finite State Machine):</strong> Control logic with defined states and transitions.</li>
+</ul>
+
+<h2>6. Karnaugh Maps (K-Maps)</h2>
+
+<ul>
+  <li><strong>Purpose:</strong> Visual method to simplify Boolean expressions.</li>
+  <li><strong>Grouping:</strong> Combine adjacent 1s in powers of 2 (1, 2, 4, 8...)</li>
+  <li><strong>Minimization:</strong> Reduces gate count and improves performance.</li>
+</ul>
+
+<h2>7. Timing and Clocking</h2>
+
+<ul>
+  <li><strong>Clock Signal:</strong> Synchronizes sequential operations.</li>
+  <li><strong>Setup Time:</strong> Minimum time before clock edge that input must be stable.</li>
+  <li><strong>Hold Time:</strong> Minimum time after clock edge that input must remain stable.</li>
+  <li><strong>Propagation Delay:</strong> Time for signal to travel through a gate or circuit.</li>
+</ul>
+
+<h2>8. Programmable Logic Devices</h2>
+
+<ul>
+  <li><strong>PLA:</strong> Programmable Logic Array with configurable AND/OR planes.</li>
+  <li><strong>PAL:</strong> Programmable Array Logic with fixed OR plane.</li>
+  <li><strong>FPGA:</strong> Field-Programmable Gate Array with reconfigurable logic blocks and routing.</li>
+  <li><strong>CPLD:</strong> Complex Programmable Logic Device, optimized for control logic.</li>
+</ul>
+
+<h2>9. Logic Families</h2>
+
+<ul>
+  <li><strong>TTL (Transistor-Transistor Logic):</strong> Fast, widely used in early computers.</li>
+  <li><strong>CMOS (Complementary Metal-Oxide Semiconductor):</strong> Low power, used in modern ICs.</li>
+</ul>
+
+<h2>10. Real-World Applications</h2>
+
+<ul>
+  <li><strong>CPU Design:</strong> ALU, control unit, register file</li>
+  <li><strong>Embedded Systems:</strong> Digital controllers, signal processors</li>
+  <li><strong>Communication Systems:</strong> Encoders, decoders, modulators</li>
+  <li><strong>Digital Signal Processing:</strong> Filters, FFT units</li>
+  <li><strong>Robotics:</strong> Sensor interfacing, motor control logic</li>
+</ul>
+
+</body>
+    </html>
