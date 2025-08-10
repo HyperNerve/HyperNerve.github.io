@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feature Engineering - Data, AI & Machine Learning</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Feature Engineering</h1>
+<p>Feature Engineering is the process of selecting, transforming, and creating input variables (features) that improve the performance of machine learning models. It bridges raw data and predictive power.</p>
+
+<h2>1. Goals of Feature Engineering</h2>
+<ul>
+  <li>Improve model accuracy and generalization</li>
+  <li>Reduce noise and irrelevant data</li>
+  <li>Make patterns more detectable by algorithms</li>
+</ul>
+
+<h2>2. Common Techniques</h2>
+<ul>
+  <li><strong>Missing Value Handling</strong>
+    <ul>
+      <li>Imputation (mean, median, mode)</li>
+      <li>Flag missing values as separate feature</li>
+    </ul>
+  </li>
+  <li><strong>Encoding Categorical Variables</strong>
+    <ul>
+      <li>One-hot encoding</li>
+      <li>Label encoding</li>
+      <li>Target encoding</li>
+    </ul>
+  </li>
+  <li><strong>Scaling and Normalization</strong>
+    <ul>
+      <li>Min-Max scaling</li>
+      <li>Standardization (Z-score)</li>
+    </ul>
+  </li>
+  <li><strong>Feature Creation</strong>
+    <ul>
+      <li>Combine existing features (e.g., price × quantity = revenue)</li>
+      <li>Extract date parts (e.g., day, month, weekday)</li>
+      <li>Text features (e.g., word count, sentiment score)</li>
+    </ul>
+  </li>
+  <li><strong>Dimensionality Reduction</strong>
+    <ul>
+      <li>Principal Component Analysis (PCA)</li>
+      <li>Feature selection based on importance</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>3. Example: Transaction Data</h2>
+<pre>
+Raw Features:
+  - Date: "2025-08-10"
+  - Amount: 1200
+  - Category: "Electronics"
+
+Engineered Features:
+  - Month: 8
+  - Weekday: Sunday
+  - IsHighValue: True
+  - Category_Electronics: 1
+</pre>
+
+<h2>4. Feature Selection Methods</h2>
+<ul>
+  <li>Filter methods (e.g., correlation, chi-square)</li>
+  <li>Wrapper methods (e.g., recursive feature elimination)</li>
+  <li>Embedded methods (e.g., regularization, tree-based importance)</li>
+</ul>
+
+<h2>5. Tools & Libraries</h2>
+<ul>
+  <li>Python: pandas, scikit-learn, Feature-engine</li>
+  <li>R: caret, dplyr</li>
+  <li>AutoML platforms: H2O, DataRobot</li>
+</ul>
+
+<h2>6. Challenges</h2>
+<ul>
+  <li>Overengineering features that lead to overfitting</li>
+  <li>Data leakage from future information</li>
+  <li>High dimensionality and redundancy</li>
+</ul>
+
+<h2>7. Applications</h2>
+<ul>
+  <li>Finance: Risk scoring, fraud detection</li>
+  <li>Retail: Customer segmentation, demand forecasting</li>
+  <li>Healthcare: Diagnostic prediction, treatment recommendation</li>
+</ul>
+
+</body>
+</html>
