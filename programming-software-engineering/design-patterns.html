@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Design Patterns - Programming & Software Engineering</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Design Patterns</h1>
+<p>Design patterns are proven solutions to common software design problems. They provide templates for structuring code in a reusable, maintainable, and scalable way.</p>
+
+<h2>1. Categories of Design Patterns</h2>
+<ul>
+  <li><strong>Creational:</strong> Object creation mechanisms</li>
+  <li><strong>Structural:</strong> Composition of classes and objects</li>
+  <li><strong>Behavioral:</strong> Communication between objects</li>
+</ul>
+
+<h2>2. Creational Patterns</h2>
+
+<h3>Singleton</h3>
+<p>Ensures only one instance of a class exists.</p>
+<pre>
+class Singleton:
+    _instance = None
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+</pre>
+
+<h3>Factory Method</h3>
+<p>Creates objects without specifying exact class.</p>
+<pre>
+class ShapeFactory:
+    def create_shape(self, type):
+        if type == "circle":
+            return Circle()
+        elif type == "square":
+            return Square()
+</pre>
+
+<h2>3. Structural Patterns</h2>
+
+<h3>Adapter</h3>
+<p>Allows incompatible interfaces to work together.</p>
+<pre>
+class OldPrinter:
+    def print_text(self, text):
+        print(text)
+
+class PrinterAdapter:
+    def __init__(self, old_printer):
+        self.old_printer = old_printer
+    def print(self, msg):
+        self.old_printer.print_text(msg)
+</pre>
+
+<h3>Decorator</h3>
+<p>Adds behavior to objects dynamically.</p>
+<pre>
+def bold(func):
+    def wrapper():
+        return "<b>" + func() + "</b>"
+    return wrapper
+
+@bold
+def greet():
+    return "Hello"
+</pre>
+
+<h2>4. Behavioral Patterns</h2>
+
+<h3>Observer</h3>
+<p>Notifies dependent objects of state changes.</p>
+<pre>
+class Subject:
+    def __init__(self):
+        self._observers = []
+    def attach(self, obs):
+        self._observers.append(obs)
+    def notify(self, msg):
+        for obs in self._observers:
+            obs.update(msg)
+</pre>
+
+<h3>Strategy</h3>
+<p>Encapsulates interchangeable algorithms.</p>
+<pre>
+class SortStrategy:
+    def sort(self, data): pass
+
+class QuickSort(SortStrategy):
+    def sort(self, data): return sorted(data)
+
+class Context:
+    def __init__(self, strategy):
+        self.strategy = strategy
+    def execute(self, data):
+        return self.strategy.sort(data)
+</pre>
+
+<h2>5. Benefits of Design Patterns</h2>
+<ul>
+  <li><strong>Reusability:</strong> Apply solutions across projects</li>
+  <li><strong>Maintainability:</strong> Easier to update and refactor</li>
+  <li><strong>Scalability:</strong> Support system growth</li>
+  <li><strong>Communication:</strong> Shared vocabulary among developers</li>
+</ul>
+
+<h2>6. Commonly Used Patterns</h2>
+<ul>
+  <li><strong>MVC (Model-View-Controller):</strong> Separates UI, logic, and data</li>
+  <li><strong>Command:</strong> Encapsulates requests as objects</li>
+  <li><strong>Facade:</strong> Simplifies complex subsystems</li>
+  <li><strong>Proxy:</strong> Controls access to objects</li>
+</ul>
+
+<h2>7. Anti-Patterns</h2>
+<ul>
+  <li><strong>Spaghetti Code:</strong> Unstructured and hard to maintain</li>
+  <li><strong>God Object:</strong> One class does too much</li>
+  <li><strong>Golden Hammer:</strong> Overuse of a familiar pattern</li>
+</ul>
+
+<h2>8. Pattern Selection Guidelines</h2>
+<ul>
+  <li><strong>Understand the Problem:</strong> Identify recurring design issues</li>
+  <li><strong>Match Intent:</strong> Choose patterns that align with goals</li>
+  <li><strong>Avoid Overengineering:</strong> Use patterns only when needed</li>
+</ul>
+
+<h2>9. Tools and Libraries</h2>
+<ul>
+  <li><strong>Spring Framework:</strong> Uses Singleton, Factory, Proxy</li>
+  <li><strong>Django:</strong> Implements MVC as MTV</li>
+  <li><strong>React:</strong> Component-based architecture with Observer-like behavior</li>
+</ul>
+
+<h2>10. Learning Resources</h2>
+<ul>
+  <li><strong>Book:</strong> "Design Patterns: Elements of Reusable Object-Oriented Software" (GoF)</li>
+  <li><strong>Online:</strong> Refactoring Guru, SourceMaking</li>
+  <li><strong>Practice:</strong> Implement patterns in small projects</li>
+</ul>
+
+</body>
+  </html>
