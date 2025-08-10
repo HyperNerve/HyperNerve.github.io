@@ -8,142 +8,235 @@
 <body>
 
 <h1>Algorithms</h1>
-<p>An algorithm is a finite, step-by-step procedure to solve a problem or perform a computation. It is the foundation of all programming and system logic.</p>
+<p>An algorithm is a finite sequence of well-defined instructions used to solve a problem or perform a computation. Algorithms are central to computer science and are used in every domain—from sorting data to powering artificial intelligence.</p>
 
 <h2>1. Algorithm Analysis</h2>
 
 <h3>Time Complexity</h3>
-<p>Time complexity measures how the runtime of an algorithm increases with input size. For example, a linear search has O(n) time complexity, meaning the time grows proportionally with the number of elements.</p>
+<p>Time complexity refers to the amount of time an algorithm takes to complete as a function of the size of its input. It helps us understand how scalable an algorithm is.</p>
+<p><strong>Example:</strong> A linear search through an array of size n has a time complexity of O(n), because in the worst case, it checks every element once.</p>
 
 <h3>Space Complexity</h3>
-<p>Space complexity refers to the amount of memory an algorithm uses. A recursive function that stores intermediate results may use O(n) space.</p>
+<p>Space complexity measures the amount of memory an algorithm uses relative to the input size. It includes both the input storage and any additional memory used during execution.</p>
+<p><strong>Example:</strong> A recursive Fibonacci function uses O(n) space due to the call stack.</p>
 
 <h3>Asymptotic Notation</h3>
-<p>Used to describe performance:
-<ul>
-  <li><strong>Big-O (O):</strong> Worst-case upper bound</li>
-  <li><strong>Big-Ω (Omega):</strong> Best-case lower bound</li>
-  <li><strong>Big-Θ (Theta):</strong> Average-case tight bound</li>
-</ul>
-</p>
+<p>Asymptotic notation is used to describe the behavior of an algorithm as the input size grows towards infinity. It abstracts away constants and lower-order terms to focus on the dominant growth rate.</p>
+
+<h4>Big-O Notation (O)</h4>
+<p>Big-O describes the <strong>upper bound</strong> on the time complexity. It tells us the worst-case scenario.</p>
+<p><strong>Example:</strong> Merge Sort has a time complexity of O(n log n), meaning it will never take more than proportional to n log n steps.</p>
+
+<h4>Big-Ω Notation (Ω)</h4>
+<p>Big-Ω describes the <strong>lower bound</strong> on the time complexity. It tells us the best-case scenario.</p>
+<p><strong>Example:</strong> In a best-case scenario, insertion sort may only need Ω(n) operations if the array is already sorted.</p>
+
+<h4>Big-Θ Notation (Θ)</h4>
+<p>Big-Θ describes the <strong>tight bound</strong>—both upper and lower. It tells us the average-case or typical performance.</p>
+<p><strong>Example:</strong> Binary search has Θ(log n) time complexity because it always divides the search space in half.</p>
 
 <h2>2. Types of Algorithms</h2>
 
 <h3>Brute Force</h3>
-<p>Tries all possible solutions. Example: Trying every password combination to crack a login.</p>
+<p>Brute force algorithms try every possible solution until the correct one is found. They are simple but inefficient.</p>
+<p><strong>Example:</strong> Trying every combination of characters to guess a password.</p>
 
 <h3>Divide and Conquer</h3>
-<p>Splits the problem into smaller parts, solves them recursively, and combines results. Example: Merge Sort algorithm.</p>
+<p>This technique divides the problem into smaller subproblems, solves each recursively, and combines the results.</p>
+<p><strong>Example:</strong> Merge Sort divides the array into halves, sorts each half, and merges them.</p>
 
-<h3>Greedy Algorithm</h3>
-<p>Makes the best choice at each step. Example: Selecting activities that finish earliest to maximize the number of non-overlapping events.</p>
+<h3>Greedy Algorithms</h3>
+<p>Greedy algorithms make the best choice at each step without considering future consequences. They work well for problems with optimal substructure.</p>
+<p><strong>Example:</strong> Huffman coding builds an optimal prefix code by always combining the two least frequent symbols.</p>
 
 <h3>Dynamic Programming</h3>
-<p>Stores results of subproblems to avoid recomputation. Example: Solving the Fibonacci sequence using memoization.</p>
+<p>Dynamic programming solves problems by breaking them into overlapping subproblems and storing the results to avoid recomputation.</p>
+<p><strong>Example:</strong> The Knapsack problem can be solved using a table that stores the maximum value for each weight limit.</p>
 
 <h3>Backtracking</h3>
-<p>Builds solutions incrementally and abandons paths that violate constraints. Example: Solving a Sudoku puzzle.</p>
+<p>Backtracking builds solutions incrementally and abandons paths that violate constraints. It is used in constraint satisfaction problems.</p>
+<p><strong>Example:</strong> Solving a Sudoku puzzle by filling in numbers and backtracking when a conflict arises.</p>
 
 <h3>Branch and Bound</h3>
-<p>Optimizes backtracking by pruning paths that cannot yield better results. Example: Solving the Traveling Salesman Problem efficiently.</p>
+<p>This technique improves backtracking by using bounds to prune branches that cannot lead to better solutions.</p>
+<p><strong>Example:</strong> Solving the Traveling Salesman Problem by discarding paths that exceed the current best tour length.</p>
 
 <h2>3. Searching Algorithms</h2>
 
 <h3>Linear Search</h3>
-<p>Scans each element until the target is found. Example: Searching for a name in an unsorted list.</p>
+<p>Checks each element in a list until the target is found or the list ends.</p>
+<p><strong>Time Complexity:</strong> O(n)</p>
 
 <h3>Binary Search</h3>
-<p>Searches a sorted array by repeatedly dividing it in half. Example: Finding a number in a sorted list of integers.</p>
+<p>Works on sorted arrays. Divides the array in half and compares the middle element to the target.</p>
+<p><strong>Time Complexity:</strong> O(log n)</p>
 
 <h3>Interpolation Search</h3>
-<p>Estimates the position of the target using value distribution. Works best with uniformly distributed data.</p>
+<p>Estimates the position of the target based on its value and the distribution of data. Works best on uniformly distributed data.</p>
+<p><strong>Time Complexity:</strong> O(log log n) average, O(n) worst</p>
 
 <h2>4. Sorting Algorithms</h2>
 
 <h3>Bubble Sort</h3>
-<p>Repeatedly swaps adjacent elements if they are in the wrong order. Simple but inefficient for large datasets.</p>
+<p>Repeatedly swaps adjacent elements if they are in the wrong order.</p>
+<p><strong>Time Complexity:</strong> O(n²)</p>
 
 <h3>Selection Sort</h3>
-<p>Selects the smallest element and places it at the beginning. Easy to implement but slow for large lists.</p>
+<p>Selects the smallest element and places it at the beginning of the list.</p>
+<p><strong>Time Complexity:</strong> O(n²)</p>
 
 <h3>Insertion Sort</h3>
-<p>Builds the sorted array one item at a time. Efficient for small or nearly sorted data.</p>
+<p>Builds the sorted array one element at a time by inserting each into its correct position.</p>
+<p><strong>Time Complexity:</strong> O(n²)</p>
 
 <h3>Merge Sort</h3>
-<p>Divides the array, sorts each half, and merges them. Efficient and stable with O(n log n) complexity.</p>
+<p>Divides the array into halves, sorts each half, and merges them.</p>
+<p><strong>Time Complexity:</strong> O(n log n)</p>
 
 <h3>Quick Sort</h3>
-<p>Partitions the array around a pivot and sorts recursively. Fast on average but can degrade to O(n²).</p>
+<p>Partitions the array around a pivot and recursively sorts the partitions.</p>
+<p><strong>Time Complexity:</strong> O(n log n) average, O(n²) worst</p>
 
 <h3>Heap Sort</h3>
-<p>Uses a heap data structure to sort elements. Always O(n log n) and does not require recursion.</p>
+<p>Uses a heap data structure to repeatedly extract the maximum or minimum element.</p>
+<p><strong>Time Complexity:</strong> O(n log n)</p>
 
 <h2>5. Graph Algorithms</h2>
 
 <h3>Depth-First Search (DFS)</h3>
-<p>Explores as far as possible along each branch before backtracking. Used for cycle detection and path finding.</p>
+<p>Explores as far as possible along each branch before backtracking.</p>
+<p><strong>Used for:</strong> Cycle detection, topological sorting</p>
 
 <h3>Breadth-First Search (BFS)</h3>
-<p>Explores all neighbors before moving deeper. Used for shortest path in unweighted graphs.</p>
+<p>Explores all neighbors before moving deeper.</p>
+<p><strong>Used for:</strong> Shortest path in unweighted graphs</p>
 
 <h3>Dijkstra’s Algorithm</h3>
-<p>Finds the shortest path from a source to all vertices in a weighted graph. Cannot handle negative weights.</p>
+<p>Finds the shortest path from a source to all vertices in a weighted graph with non-negative weights.</p>
 
 <h3>Bellman-Ford Algorithm</h3>
-<p>Computes shortest paths even with negative weights. Slower than Dijkstra but more flexible.</p>
+<p>Handles graphs with negative weights and detects negative cycles.</p>
 
 <h3>Floyd-Warshall Algorithm</h3>
-<p>Finds shortest paths between all pairs of vertices. Useful for dense graphs.</p>
+<p>Computes shortest paths between all pairs of vertices.</p>
 
 <h3>Kruskal’s Algorithm</h3>
-<p>Builds a minimum spanning tree by sorting edges. Uses union-find for cycle detection.</p>
+<p>Builds a minimum spanning tree by sorting edges and adding them if they don’t form a cycle.</p>
 
 <h3>Prim’s Algorithm</h3>
-<p>Builds a minimum spanning tree by growing from a starting vertex. Efficient with priority queues.</p>
+<p>Builds a minimum spanning tree by growing from a starting vertex using the smallest edge.</p>
 
 <h2>6. String Algorithms</h2>
 
 <h3>Naive Pattern Matching</h3>
-<p>Checks for a pattern at every position in the text. Simple but slow for large inputs.</p>
+<p>Checks for the pattern at every position in the text.</p>
 
 <h3>KMP (Knuth-Morris-Pratt)</h3>
-<p>Uses a prefix table to avoid redundant comparisons. Efficient for repeated pattern searches.</p>
+<p>Uses a prefix table to skip unnecessary comparisons.</p>
 
 <h3>Rabin-Karp</h3>
-<p>Uses hashing to match patterns. Fast on average but can degrade with hash collisions.</p>
+<p>Uses hashing to find matches. Efficient for multiple pattern searches.</p>
 
 <h2>7. Mathematical Algorithms</h2>
 
 <h3>Euclidean Algorithm</h3>
-<p>Computes the greatest common divisor (GCD) of two numbers. Efficient and widely used.</p>
+<p>Computes the greatest common divisor (GCD) of two numbers using repeated division.</p>
 
 <h3>Sieve of Eratosthenes</h3>
-<p>Finds all prime numbers up to a given limit. Efficient for generating primes.</p>
+<p>Generates all prime numbers up to a given number by marking multiples.</p>
 
 <h3>Modular Exponentiation</h3>
-<p>Computes (a^b) mod n efficiently. Used in cryptographic algorithms.</p>
+<p>Efficiently computes (a^b) mod n. Used in cryptography.</p>
 
 <h2>8. Optimization Algorithms</h2>
 
 <h3>Linear Programming</h3>
-<p>Maximizes or minimizes a linear objective function under constraints. Used in operations research.</p>
+<p>Solves problems with linear constraints and objectives.</p>
 
 <h3>Genetic Algorithms</h3>
-<p>Uses evolutionary techniques to find optimal solutions. Inspired by natural selection.</p>
+<p>Uses selection, crossover, and mutation to evolve solutions.</p>
 
 <h3>Simulated Annealing</h3>
-<p>Probabilistic technique to approximate global optimum. Useful for complex optimization problems.</p>
-
-<h2>9. Recursion</h2>
+<p>Uses probabilistic decisions to escape local optima and find global solutions.</p>
+<h2>9. Recursion and Iteration</h2>
 
 <h3>Recursion</h3>
-<p>A function calling itself to solve smaller instances of a problem. Example: Calculating factorial.</p>
+<p>Recursion is a technique where a function calls itself to solve smaller instances of the same problem. It requires a base case to terminate and a recursive case to reduce the problem.</p>
+<p><strong>Example:</strong> Calculating factorial: factorial(n) = n × factorial(n - 1)</p>
+<p><strong>Pros:</strong> Elegant and concise for problems like tree traversal, divide-and-conquer.</p>
+<p><strong>Cons:</strong> Can lead to stack overflow if not properly bounded; may be less efficient due to overhead.</p>
 
-<h3>Base Case</h3>
-<p>The condition under which recursion stops. Prevents infinite loops.</p>
+<h3>Iteration</h3>
+<p>Iteration uses loops (for, while) to repeat operations until a condition is met. It is generally more memory-efficient than recursion.</p>
+<p><strong>Example:</strong> Calculating factorial using a loop from 1 to n.</p>
+<p><strong>Pros:</strong> Efficient and avoids call stack overhead.</p>
+<p><strong>Cons:</strong> May be less intuitive for recursive problems like tree traversal.</p>
 
-<h3>Recursive Case</h3>
-<p>The part where the function calls itself with modified input.</p>
+<h2>10. Complexity Classes</h2>
+
+<h3>P (Polynomial Time)</h3>
+<p>Problems that can be solved in polynomial time (e.g., O(n), O(n²)). These are considered efficiently solvable.</p>
+<p><strong>Example:</strong> Sorting algorithms like Merge Sort are in P.</p>
+
+<h3>NP (Nondeterministic Polynomial Time)</h3>
+<p>Problems for which a solution can be verified in polynomial time. It’s unknown whether all NP problems can be solved in polynomial time.</p>
+<p><strong>Example:</strong> The Boolean satisfiability problem (SAT).</p>
+
+<h3>NP-Complete</h3>
+<p>These are the hardest problems in NP. If any NP-complete problem can be solved in polynomial time, then all NP problems can.</p>
+<p><strong>Example:</strong> Traveling Salesman Problem (decision version), 3-SAT.</p>
+
+<h3>NP-Hard</h3>
+<p>Problems that are at least as hard as NP-complete problems but not necessarily in NP (i.e., they may not be verifiable in polynomial time).</p>
+<p><strong>Example:</strong> Halting problem.</p>
+
+<h2>11. Algorithm Design Paradigms</h2>
+
+<h3>Recursive Paradigm</h3>
+<p>Design algorithms using recursive calls. Common in divide-and-conquer strategies.</p>
+
+<h3>Iterative Paradigm</h3>
+<p>Design algorithms using loops and conditionals. Common in brute-force and greedy methods.</p>
+
+<h3>Memoization</h3>
+<p>Stores results of expensive function calls and returns the cached result when the same inputs occur again.</p>
+<p><strong>Example:</strong> Fibonacci sequence using a dictionary to store computed values.</p>
+
+<h3>Tabulation</h3>
+<p>Bottom-up dynamic programming approach that fills a table iteratively.</p>
+<p><strong>Example:</strong> Solving the Knapsack problem using a 2D array.</p>
+
+<h2>12. Algorithm Correctness</h2>
+
+<h3>Proof of Correctness</h3>
+<p>To prove an algorithm is correct, we use mathematical induction or loop invariants.</p>
+<p><strong>Example:</strong> Proving that binary search always finds the target if it exists by showing the search space shrinks correctly.</p>
+
+<h3>Loop Invariants</h3>
+<p>A condition that holds true before and after each iteration of a loop. Used to prove correctness.</p>
+<p><strong>Example:</strong> In insertion sort, the subarray before the current index is always sorted.</p>
+
+<h2>13. Algorithm Efficiency Trade-offs</h2>
+
+<h3>Time vs Space</h3>
+<p>Some algorithms use more memory to reduce execution time (e.g., memoization), while others save memory at the cost of speed.</p>
+
+<h3>Precision vs Performance</h3>
+<p>In numerical algorithms, higher precision may slow down performance. Approximations may be used for speed.</p>
+
+<h3>Determinism vs Randomization</h3>
+<p>Deterministic algorithms always produce the same output for a given input. Randomized algorithms use randomness to improve average performance or simplify logic.</p>
+<p><strong>Example:</strong> QuickSort with randomized pivot selection.</p>
+
+<h2>14. Real-World Applications</h2>
+
+<ul>
+  <li><strong>Search Engines:</strong> Use graph algorithms and string matching to index and retrieve data.</li>
+  <li><strong>Cryptography:</strong> Relies on number-theoretic algorithms like modular exponentiation and primality testing.</li>
+  <li><strong>Machine Learning:</strong> Optimization algorithms like gradient descent are used to train models.</li>
+  <li><strong>Networking:</strong> Routing algorithms like Dijkstra’s are used to find optimal paths.</li>
+  <li><strong>Robotics:</strong> Pathfinding algorithms like A* are used for navigation.</li>
+</ul>
 
 </body>
- </html> 
+</html>
