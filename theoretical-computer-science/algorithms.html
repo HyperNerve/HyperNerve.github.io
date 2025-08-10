@@ -1,1 +1,149 @@
- 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Algorithms - Computer Science Topic</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h1>Algorithms</h1>
+<p>An algorithm is a finite, step-by-step procedure to solve a problem or perform a computation. It is the foundation of all programming and system logic.</p>
+
+<h2>1. Algorithm Analysis</h2>
+
+<h3>Time Complexity</h3>
+<p>Time complexity measures how the runtime of an algorithm increases with input size. For example, a linear search has O(n) time complexity, meaning the time grows proportionally with the number of elements.</p>
+
+<h3>Space Complexity</h3>
+<p>Space complexity refers to the amount of memory an algorithm uses. A recursive function that stores intermediate results may use O(n) space.</p>
+
+<h3>Asymptotic Notation</h3>
+<p>Used to describe performance:
+<ul>
+  <li><strong>Big-O (O):</strong> Worst-case upper bound</li>
+  <li><strong>Big-Ω (Omega):</strong> Best-case lower bound</li>
+  <li><strong>Big-Θ (Theta):</strong> Average-case tight bound</li>
+</ul>
+</p>
+
+<h2>2. Types of Algorithms</h2>
+
+<h3>Brute Force</h3>
+<p>Tries all possible solutions. Example: Trying every password combination to crack a login.</p>
+
+<h3>Divide and Conquer</h3>
+<p>Splits the problem into smaller parts, solves them recursively, and combines results. Example: Merge Sort algorithm.</p>
+
+<h3>Greedy Algorithm</h3>
+<p>Makes the best choice at each step. Example: Selecting activities that finish earliest to maximize the number of non-overlapping events.</p>
+
+<h3>Dynamic Programming</h3>
+<p>Stores results of subproblems to avoid recomputation. Example: Solving the Fibonacci sequence using memoization.</p>
+
+<h3>Backtracking</h3>
+<p>Builds solutions incrementally and abandons paths that violate constraints. Example: Solving a Sudoku puzzle.</p>
+
+<h3>Branch and Bound</h3>
+<p>Optimizes backtracking by pruning paths that cannot yield better results. Example: Solving the Traveling Salesman Problem efficiently.</p>
+
+<h2>3. Searching Algorithms</h2>
+
+<h3>Linear Search</h3>
+<p>Scans each element until the target is found. Example: Searching for a name in an unsorted list.</p>
+
+<h3>Binary Search</h3>
+<p>Searches a sorted array by repeatedly dividing it in half. Example: Finding a number in a sorted list of integers.</p>
+
+<h3>Interpolation Search</h3>
+<p>Estimates the position of the target using value distribution. Works best with uniformly distributed data.</p>
+
+<h2>4. Sorting Algorithms</h2>
+
+<h3>Bubble Sort</h3>
+<p>Repeatedly swaps adjacent elements if they are in the wrong order. Simple but inefficient for large datasets.</p>
+
+<h3>Selection Sort</h3>
+<p>Selects the smallest element and places it at the beginning. Easy to implement but slow for large lists.</p>
+
+<h3>Insertion Sort</h3>
+<p>Builds the sorted array one item at a time. Efficient for small or nearly sorted data.</p>
+
+<h3>Merge Sort</h3>
+<p>Divides the array, sorts each half, and merges them. Efficient and stable with O(n log n) complexity.</p>
+
+<h3>Quick Sort</h3>
+<p>Partitions the array around a pivot and sorts recursively. Fast on average but can degrade to O(n²).</p>
+
+<h3>Heap Sort</h3>
+<p>Uses a heap data structure to sort elements. Always O(n log n) and does not require recursion.</p>
+
+<h2>5. Graph Algorithms</h2>
+
+<h3>Depth-First Search (DFS)</h3>
+<p>Explores as far as possible along each branch before backtracking. Used for cycle detection and path finding.</p>
+
+<h3>Breadth-First Search (BFS)</h3>
+<p>Explores all neighbors before moving deeper. Used for shortest path in unweighted graphs.</p>
+
+<h3>Dijkstra’s Algorithm</h3>
+<p>Finds the shortest path from a source to all vertices in a weighted graph. Cannot handle negative weights.</p>
+
+<h3>Bellman-Ford Algorithm</h3>
+<p>Computes shortest paths even with negative weights. Slower than Dijkstra but more flexible.</p>
+
+<h3>Floyd-Warshall Algorithm</h3>
+<p>Finds shortest paths between all pairs of vertices. Useful for dense graphs.</p>
+
+<h3>Kruskal’s Algorithm</h3>
+<p>Builds a minimum spanning tree by sorting edges. Uses union-find for cycle detection.</p>
+
+<h3>Prim’s Algorithm</h3>
+<p>Builds a minimum spanning tree by growing from a starting vertex. Efficient with priority queues.</p>
+
+<h2>6. String Algorithms</h2>
+
+<h3>Naive Pattern Matching</h3>
+<p>Checks for a pattern at every position in the text. Simple but slow for large inputs.</p>
+
+<h3>KMP (Knuth-Morris-Pratt)</h3>
+<p>Uses a prefix table to avoid redundant comparisons. Efficient for repeated pattern searches.</p>
+
+<h3>Rabin-Karp</h3>
+<p>Uses hashing to match patterns. Fast on average but can degrade with hash collisions.</p>
+
+<h2>7. Mathematical Algorithms</h2>
+
+<h3>Euclidean Algorithm</h3>
+<p>Computes the greatest common divisor (GCD) of two numbers. Efficient and widely used.</p>
+
+<h3>Sieve of Eratosthenes</h3>
+<p>Finds all prime numbers up to a given limit. Efficient for generating primes.</p>
+
+<h3>Modular Exponentiation</h3>
+<p>Computes (a^b) mod n efficiently. Used in cryptographic algorithms.</p>
+
+<h2>8. Optimization Algorithms</h2>
+
+<h3>Linear Programming</h3>
+<p>Maximizes or minimizes a linear objective function under constraints. Used in operations research.</p>
+
+<h3>Genetic Algorithms</h3>
+<p>Uses evolutionary techniques to find optimal solutions. Inspired by natural selection.</p>
+
+<h3>Simulated Annealing</h3>
+<p>Probabilistic technique to approximate global optimum. Useful for complex optimization problems.</p>
+
+<h2>9. Recursion</h2>
+
+<h3>Recursion</h3>
+<p>A function calling itself to solve smaller instances of a problem. Example: Calculating factorial.</p>
+
+<h3>Base Case</h3>
+<p>The condition under which recursion stops. Prevents infinite loops.</p>
+
+<h3>Recursive Case</h3>
+<p>The part where the function calls itself with modified input.</p>
+
+</body>
+ </html> 
