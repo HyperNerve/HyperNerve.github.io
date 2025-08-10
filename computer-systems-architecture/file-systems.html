@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File Systems - Computer Systems & Architecture</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>File Systems</h1>
+<p>A file system is the method and data structure that an operating system uses to manage files on a storage device. It defines how data is stored, accessed, organized, and secured.</p>
+
+<h2>1. Objectives of a File System</h2>
+<ul>
+  <li>Efficient storage and retrieval of data</li>
+  <li>Logical organization of files and directories</li>
+  <li>Access control and security</li>
+  <li>Support for metadata and file attributes</li>
+  <li>Fault tolerance and recovery mechanisms</li>
+</ul>
+
+<h2>2. File Concepts</h2>
+<ul>
+  <li><strong>File:</strong> A named collection of related data</li>
+  <li><strong>File Attributes:</strong> Name, type, size, creation date, permissions</li>
+  <li><strong>File Operations:</strong> Create, open, read, write, delete, rename, close</li>
+</ul>
+
+<h2>3. Directory Structure</h2>
+<ul>
+  <li><strong>Single-Level:</strong> All files in one directory</li>
+  <li><strong>Two-Level:</strong> Separate user directories</li>
+  <li><strong>Tree Structure:</strong> Hierarchical directories and subdirectories</li>
+  <li><strong>Acyclic Graph:</strong> Allows shared files via links</li>
+</ul>
+
+<h2>4. File Access Methods</h2>
+<ul>
+  <li><strong>Sequential Access:</strong> Data read in order; suitable for tapes</li>
+  <li><strong>Direct Access:</strong> Access any block directly; used in disks</li>
+  <li><strong>Indexed Access:</strong> Uses index table for fast lookup</li>
+</ul>
+
+<h2>5. File Allocation Methods</h2>
+
+<h3>5.1 Contiguous Allocation</h3>
+<p>Each file occupies a set of contiguous blocks. Simple and fast but suffers from external fragmentation.</p>
+<pre>
+File A: Blocks 5–14
+File B: Blocks 15–20
+</pre>
+
+<h3>5.2 Linked Allocation</h3>
+<p>Each file is a linked list of blocks. No fragmentation, but slow random access.</p>
+<pre>
+File A: Block 5 → Block 9 → Block 12 → ...
+</pre>
+
+<h3>5.3 Indexed Allocation</h3>
+<p>Each file has an index block containing pointers to its data blocks. Supports direct access and avoids fragmentation.</p>
+<pre>
+Index Block for File A: [5, 9, 12, 20]
+</pre>
+
+<h2>6. Free Space Management</h2>
+<ul>
+  <li><strong>Bitmap:</strong> Each bit represents a block (0 = free, 1 = used)</li>
+  <li><strong>Linked List:</strong> Free blocks linked together</li>
+  <li><strong>Grouping:</strong> Stores addresses of free blocks in groups</li>
+  <li><strong>Counting:</strong> Stores starting block and number of free blocks</li>
+</ul>
+
+<h2>7. File System Mounting</h2>
+<p>Mounting makes a file system accessible to the OS. It involves verifying the file system structure and integrating it into the directory tree.</p>
+
+<h2>8. File Protection</h2>
+<ul>
+  <li><strong>Access Control:</strong> Read, write, execute permissions per user/group</li>
+  <li><strong>Encryption:</strong> Protects file contents from unauthorized access</li>
+  <li><strong>Backup and Recovery:</strong> Ensures data integrity and availability</li>
+</ul>
+
+<h2>9. Journaling and Reliability</h2>
+<p>Modern file systems use journaling to log changes before applying them. This helps recover from crashes and ensures consistency.</p>
+
+<h2>10. Common File Systems</h2>
+<table border="1" cellpadding="6">
+  <thead>
+    <tr>
+      <th>File System</th>
+      <th>Platform</th>
+      <th>Features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FAT32</td>
+      <td>Windows, Embedded</td>
+      <td>Simple, widely supported, no journaling</td>
+    </tr>
+    <tr>
+      <td>NTFS</td>
+      <td>Windows</td>
+      <td>Journaling, permissions, compression</td>
+    </tr>
+    <tr>
+      <td>ext4</td>
+      <td>Linux</td>
+      <td>Journaling, large file support, backward compatible</td>
+    </tr>
+    <tr>
+      <td>XFS</td>
+      <td>Linux</td>
+      <td>High performance, scalable, journaling</td>
+    </tr>
+    <tr>
+      <td>APFS</td>
+      <td>macOS</td>
+      <td>Snapshots, encryption, space sharing</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>11. Virtual File Systems (VFS)</h2>
+<p>VFS provides an abstraction layer that allows multiple file systems to coexist. It enables uniform access to different file system types.</p>
+
+<h2>12. File System in Distributed Systems</h2>
+<ul>
+  <li><strong>Network File System (NFS):</strong> Allows remote file access over network</li>
+  <li><strong>Google File System (GFS):</strong> Designed for large-scale data processing</li>
+  <li><strong>HDFS:</strong> Hadoop Distributed File System for big data</li>
+</ul>
+
+</body>
+  </html>
