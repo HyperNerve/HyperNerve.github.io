@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Discrete Mathematics - Theoretical Computer Science</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
+<h1>Discrete Mathematics</h1>
+<p>Discrete Mathematics is the study of mathematical structures that are fundamentally discrete rather than continuous. It provides the theoretical foundation for many areas of computer science, including algorithms, data structures, logic, and automata theory.</p>
+
+<h2>1. Logic</h2>
+
+<h3>Propositional Logic</h3>
+<p>Deals with statements that are either true or false. Uses logical connectives like AND (∧), OR (∨), NOT (¬), IMPLIES (→).</p>
+<p><strong>Example:</strong> "It is raining AND it is cold" is true only if both conditions are true.</p>
+
+<h3>Predicate Logic</h3>
+<p>Extends propositional logic by including quantifiers and variables. Useful for expressing statements about objects.</p>
+<p><strong>Quantifiers:</strong> ∀ (for all), ∃ (there exists)</p>
+<p><strong>Example:</strong> ∀x (x > 0 → x² > 0)</p>
+
+<h2>2. Set Theory</h2>
+
+<h3>Set</h3>
+<p>A collection of distinct elements. Can be finite or infinite.</p>
+<p><strong>Example:</strong> A = {1, 2, 3}</p>
+
+<h3>Set Operations</h3>
+<ul>
+  <li><strong>Union (A ∪ B):</strong> All elements in A or B</li>
+  <li><strong>Intersection (A ∩ B):</strong> Elements common to both</li>
+  <li><strong>Difference (A − B):</strong> Elements in A but not in B</li>
+  <li><strong>Complement:</strong> Elements not in the set</li>
+</ul>
+
+<h3>Power Set</h3>
+<p>The set of all subsets of a set.</p>
+<p><strong>Example:</strong> Power set of {a, b} is { {}, {a}, {b}, {a, b} }</p>
+
+<h2>3. Relations and Functions</h2>
+
+<h3>Relation</h3>
+<p>A relation is a set of ordered pairs. It defines a relationship between elements of two sets.</p>
+<p><strong>Example:</strong> R = {(1,2), (2,3)} is a relation from set A to B.</p>
+
+<h3>Properties of Relations</h3>
+<ul>
+  <li><strong>Reflexive:</strong> (a, a) ∈ R for all a</li>
+  <li><strong>Symmetric:</strong> If (a, b) ∈ R then (b, a) ∈ R</li>
+  <li><strong>Transitive:</strong> If (a, b) ∈ R and (b, c) ∈ R then (a, c) ∈ R</li>
+  <li><strong>Equivalence Relation:</strong> Reflexive, symmetric, and transitive</li>
+</ul>
+
+<h3>Function</h3>
+<p>A relation where each input has exactly one output.</p>
+<p><strong>Types:</strong> Injective (one-to-one), Surjective (onto), Bijective (both)</p>
+<p><strong>Example:</strong> f(x) = x² is a function from ℝ to ℝ⁺</p>
+
+<h2>4. Combinatorics</h2>
+
+<h3>Permutation</h3>
+<p>An arrangement of elements in a specific order.</p>
+<p><strong>Formula:</strong> n! (n factorial)</p>
+<p><strong>Example:</strong> 3 elements → 3! = 6 permutations</p>
+
+<h3>Combination</h3>
+<p>A selection of elements without regard to order.</p>
+<p><strong>Formula:</strong> nCr = n! / (r!(n−r)!)</p>
+<p><strong>Example:</strong> Choosing 2 out of 4 items → 4C2 = 6</p>
+
+<h3>Pigeonhole Principle</h3>
+<p>If n items are put into m containers and n > m, then at least one container has more than one item.</p>
+<p><strong>Example:</strong> 13 socks in 12 drawers → at least one drawer has 2 socks.</p>
+
+<h3>Inclusion-Exclusion Principle</h3>
+<p>Used to count the number of elements in the union of overlapping sets.</p>
+<p><strong>Formula:</strong> |A ∪ B| = |A| + |B| − |A ∩ B|</p>
+
+<h2>5. Graph Theory</h2>
+
+<h3>Graph</h3>
+<p>A graph is a set of vertices (nodes) and edges (connections).</p>
+<p><strong>Types:</strong> Directed, Undirected, Weighted, Unweighted</p>
+
+<h3>Path</h3>
+<p>A sequence of edges connecting vertices.</p>
+
+<h3>Cycle</h3>
+<p>A path that starts and ends at the same vertex.</p>
+
+<h3>Connected Graph</h3>
+<p>There is a path between every pair of vertices.</p>
+
+<h3>Tree</h3>
+<p>A connected graph with no cycles. A special kind of graph.</p>
+
+<h3>Degree</h3>
+<p>Number of edges incident to a vertex.</p>
+
+<h3>Eulerian Path</h3>
+<p>A path that visits every edge exactly once.</p>
+
+<h3>Hamiltonian Path</h3>
+<p>A path that visits every vertex exactly once.</p>
+
+<h2>6. Number Theory (in CS)</h2>
+
+<h3>Prime Numbers</h3>
+<p>Numbers greater than 1 that have no divisors other than 1 and itself.</p>
+
+<h3>Modular Arithmetic</h3>
+<p>Arithmetic system for integers where numbers wrap around after reaching a certain value (modulus).</p>
+<p><strong>Example:</strong> 17 mod 5 = 2</p>
+
+<h3>Greatest Common Divisor (GCD)</h3>
+<p>The largest number that divides two integers without a remainder.</p>
+
+<h3>Least Common Multiple (LCM)</h3>
+<p>The smallest number that is a multiple of two integers.</p>
+
+<h2>7. Applications in Computer Science</h2>
+
+<ul>
+  <li><strong>Logic:</strong> Used in circuit design, programming languages, and AI.</li>
+  <li><strong>Set Theory:</strong> Used in database queries and data modeling.</li>
+  <li><strong>Relations:</strong> Used in relational databases and graph modeling.</li>
+  <li><strong>Combinatorics:</strong> Used in algorithm analysis and probability.</li>
+  <li><strong>Graph Theory:</strong> Used in networking, social media, and pathfinding.</li>
+  <li><strong>Number Theory:</strong> Used in cryptography and hashing.</li>
+</ul>
+
+</body>
+  </html>
