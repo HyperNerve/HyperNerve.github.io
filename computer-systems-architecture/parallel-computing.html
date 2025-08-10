@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parallel Computing - Computer Systems & Architecture</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Parallel Computing</h1>
+<p>Parallel computing involves executing multiple computations simultaneously to improve performance and efficiency. It leverages multiple processors or cores to solve problems faster than sequential execution.</p>
+
+<h2>1. Goals of Parallel Computing</h2>
+<ul>
+  <li><strong>Speedup:</strong> Reduce execution time</li>
+  <li><strong>Efficiency:</strong> Maximize resource utilization</li>
+  <li><strong>Scalability:</strong> Maintain performance as system size increases</li>
+  <li><strong>Throughput:</strong> Increase number of tasks completed per unit time</li>
+</ul>
+
+<h2>2. Types of Parallelism</h2>
+<ul>
+  <li><strong>Data Parallelism:</strong> Same operation on different data elements</li>
+  <li><strong>Task Parallelism:</strong> Different tasks executed concurrently</li>
+  <li><strong>Instruction-Level Parallelism:</strong> Overlapping instruction execution</li>
+</ul>
+
+<h2>3. Flynn’s Taxonomy</h2>
+<ul>
+  <li><strong>SISD:</strong> Single Instruction, Single Data</li>
+  <li><strong>SIMD:</strong> Single Instruction, Multiple Data</li>
+  <li><strong>MISD:</strong> Multiple Instruction, Single Data</li>
+  <li><strong>MIMD:</strong> Multiple Instruction, Multiple Data</li>
+</ul>
+
+<h2>4. Parallel Architectures</h2>
+<ul>
+  <li><strong>Shared Memory:</strong> Multiple processors access common memory</li>
+  <li><strong>Distributed Memory:</strong> Each processor has its own local memory</li>
+  <li><strong>Hybrid Systems:</strong> Combine shared and distributed memory</li>
+</ul>
+
+<h2>5. Programming Models</h2>
+<ul>
+  <li><strong>Thread-Based:</strong> POSIX threads, OpenMP</li>
+  <li><strong>Message Passing:</strong> MPI (Message Passing Interface)</li>
+  <li><strong>GPU Programming:</strong> CUDA, OpenCL</li>
+  <li><strong>Dataflow:</strong> Execution driven by data availability</li>
+</ul>
+
+<h2>6. Performance Metrics</h2>
+<ul>
+  <li><strong>Speedup (S):</strong> Ratio of sequential to parallel execution time</li>
+  <li><strong>Efficiency (E):</strong> Speedup divided by number of processors</li>
+  <li><strong>Amdahl’s Law:</strong> Limits speedup based on serial portion</li>
+  <li><strong>Gustafson’s Law:</strong> Considers scalable workloads</li>
+</ul>
+
+<h2>7. Synchronization and Communication</h2>
+<ul>
+  <li><strong>Locks and Barriers:</strong> Coordinate access to shared resources</li>
+  <li><strong>Message Passing:</strong> Explicit communication between processes</li>
+  <li><strong>Shared Variables:</strong> Require careful synchronization</li>
+</ul>
+
+<h2>8. Load Balancing</h2>
+<ul>
+  <li><strong>Static:</strong> Predefined task distribution</li>
+  <li><strong>Dynamic:</strong> Tasks assigned during execution based on load</li>
+</ul>
+
+<h2>9. Challenges in Parallel Computing</h2>
+<ul>
+  <li><strong>Race Conditions:</strong> Unpredictable behavior due to unsynchronized access</li>
+  <li><strong>Deadlocks:</strong> Processes waiting indefinitely for resources</li>
+  <li><strong>False Sharing:</strong> Performance degradation due to cache contention</li>
+  <li><strong>Scalability Limits:</strong> Diminishing returns with more processors</li>
+</ul>
+
+<h2>10. Applications of Parallel Computing</h2>
+<ul>
+  <li><strong>Scientific Simulations:</strong> Weather modeling, physics</li>
+  <li><strong>Image and Signal Processing:</strong> Real-time analysis</li>
+  <li><strong>Machine Learning:</strong> Training large models</li>
+  <li><strong>Financial Modeling:</strong> Risk analysis, forecasting</li>
+  <li><strong>Big Data Analytics:</strong> Distributed computation over large datasets</li>
+</ul>
+
+</body>
+</html>
