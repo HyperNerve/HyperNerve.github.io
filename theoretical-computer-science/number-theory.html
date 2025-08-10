@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Theory - Theoretical Computer Science</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
+<h1>Number Theory</h1>
+<p>Number Theory is the study of integers and their properties. In computer science, it underpins cryptography, hashing, modular arithmetic, and algorithmic number manipulation.</p>
+
+<h2>1. Divisibility and Primes</h2>
+
+<ul>
+  <li><strong>Divides:</strong> a divides b if b = a × k for some integer k</li>
+  <li><strong>Prime Number:</strong> Integer > 1 with no divisors other than 1 and itself</li>
+  <li><strong>Composite Number:</strong> Integer with additional divisors</li>
+</ul>
+
+<h2>2. Greatest Common Divisor (GCD)</h2>
+
+<ul>
+  <li><strong>Definition:</strong> Largest integer that divides both a and b</li>
+  <li><strong>Euclidean Algorithm:</strong> Efficient method to compute GCD</li>
+</ul>
+
+<h3>Example:</h3>
+<pre>
+gcd(48, 18) → gcd(18, 12) → gcd(12, 6) → gcd(6, 0) = 6
+</pre>
+
+<h2>3. Least Common Multiple (LCM)</h2>
+
+<p>Smallest positive integer divisible by both a and b</p>
+<pre>
+lcm(a, b) = (a × b) / gcd(a, b)
+</pre>
+
+<h2>4. Modular Arithmetic</h2>
+
+<ul>
+  <li><strong>Definition:</strong> a ≡ b (mod m) if m divides (a − b)</li>
+  <li><strong>Addition, Multiplication, Exponentiation:</strong> All defined modulo m</li>
+</ul>
+
+<h3>Example:</h3>
+<pre>
+7 + 5 ≡ 0 (mod 12)
+</pre>
+
+<h2>5. Congruences</h2>
+
+<ul>
+  <li><strong>Linear Congruence:</strong> ax ≡ b (mod m)</li>
+  <li><strong>Solution:</strong> Exists if gcd(a, m) divides b</li>
+</ul>
+
+<h2>6. Modular Inverse</h2>
+
+<p>Integer x such that a × x ≡ 1 (mod m)</p>
+<ul>
+  <li>Exists if gcd(a, m) = 1</li>
+  <li>Computed using Extended Euclidean Algorithm</li>
+</ul>
+
+<h2>7. Fermat’s Little Theorem</h2>
+
+<p>If p is prime and a is not divisible by p:</p>
+<pre>
+a^(p−1) ≡ 1 (mod p)
+</pre>
+
+<h2>8. Euler’s Theorem</h2>
+
+<p>If a and n are coprime:</p>
+<pre>
+a^φ(n) ≡ 1 (mod n)
+</pre>
+<p>Where φ(n) is Euler’s totient function: number of integers ≤ n that are coprime to n</p>
+
+<h2>9. Chinese Remainder Theorem (CRT)</h2>
+
+<p>Solves systems of congruences with pairwise coprime moduli:</p>
+<pre>
+x ≡ a₁ (mod m₁)
+x ≡ a₂ (mod m₂)
+...
+</pre>
+<p>Has a unique solution modulo M = m₁ × m₂ × ...</p>
+
+<h2>10. Prime Factorization</h2>
+
+<ul>
+  <li>Every integer > 1 can be uniquely factored into primes</li>
+  <li>Used in RSA encryption</li>
+</ul>
+
+<h2>11. Fast Exponentiation</h2>
+
+<p>Computes a^b mod m efficiently using binary exponentiation</p>
+
+<h2>12. Applications</h2>
+
+<ul>
+  <li><strong>Cryptography:</strong> RSA, Diffie-Hellman, ECC</li>
+  <li><strong>Hashing:</strong> Prime moduli for uniform distribution</li>
+  <li><strong>Algorithms:</strong> Modular arithmetic in number-theoretic algorithms</li>
+  <li><strong>Error Detection:</strong> Checksums and cyclic redundancy checks</li>
+</ul>
+
+</body>
+</html>
