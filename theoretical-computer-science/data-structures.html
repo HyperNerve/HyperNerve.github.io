@@ -1,1 +1,142 @@
- 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Structures - Computer Science Topic</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h1>Data Structures</h1>
+<p>Data structures are specialized formats for organizing, processing, and storing data efficiently. They determine how data is accessed, modified, and managed in memory and are essential for building fast and scalable software.</p>
+
+<h2>1. Linear Data Structures</h2>
+
+<h3>Array</h3>
+<p>An array is a fixed-size, indexed collection of elements of the same type. Elements are stored in contiguous memory locations.</p>
+<p><strong>Example:</strong> int numbers[5] = {1, 2, 3, 4, 5};</p>
+<p><strong>Pros:</strong> Fast access via index (O(1)).</p>
+<p><strong>Cons:</strong> Fixed size, costly insertions/deletions (O(n)).</p>
+
+<h3>Linked List</h3>
+<p>A linked list is a sequence of nodes where each node contains data and a pointer to the next node.</p>
+<p><strong>Types:</strong> Singly, Doubly, Circular</p>
+<p><strong>Pros:</strong> Dynamic size, efficient insertions/deletions.</p>
+<p><strong>Cons:</strong> Slow access (O(n)), extra memory for pointers.</p>
+
+<h3>Stack</h3>
+<p>A stack is a Last-In, First-Out (LIFO) structure. Elements are added and removed from the top.</p>
+<p><strong>Operations:</strong> push, pop, peek</p>
+<p><strong>Example:</strong> Undo functionality in text editors.</p>
+
+<h3>Queue</h3>
+<p>A queue is a First-In, First-Out (FIFO) structure. Elements are added at the rear and removed from the front.</p>
+<p><strong>Operations:</strong> enqueue, dequeue</p>
+<p><strong>Example:</strong> Task scheduling in operating systems.</p>
+
+<h3>Deque</h3>
+<p>A double-ended queue allows insertion and deletion from both ends.</p>
+<p><strong>Example:</strong> Browser history navigation.</p>
+
+<h2>2. Non-Linear Data Structures</h2>
+
+<h3>Tree</h3>
+<p>A tree is a hierarchical structure with nodes connected by edges. Each node has a parent and zero or more children.</p>
+
+<h4>Binary Tree</h4>
+<p>Each node has at most two children: left and right.</p>
+
+<h4>Binary Search Tree (BST)</h4>
+<p>Left child < parent < right child. Enables fast search, insert, delete (average O(log n)).</p>
+
+<h4>AVL Tree</h4>
+<p>A self-balancing BST where the height difference between left and right subtrees is ≤1.</p>
+
+<h4>B-Tree</h4>
+<p>A multi-way search tree used in databases and file systems. Keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time.</p>
+
+<h4>Trie</h4>
+<p>A prefix tree used for storing strings. Each node represents a character.</p>
+<p><strong>Example:</strong> Auto-complete suggestions.</p>
+
+<h3>Graph</h3>
+<p>A graph is a set of vertices connected by edges. Can be directed or undirected, weighted or unweighted.</p>
+
+<h4>Adjacency Matrix</h4>
+<p>A 2D array where cell (i, j) indicates the presence of an edge between vertex i and j.</p>
+
+<h4>Adjacency List</h4>
+<p>An array of lists where each list contains the neighbors of a vertex.</p>
+
+<h4>Directed Graph</h4>
+<p>Edges have direction (from one vertex to another).</p>
+
+<h4>Undirected Graph</h4>
+<p>Edges have no direction.</p>
+
+<h4>Weighted Graph</h4>
+<p>Edges have associated weights or costs.</p>
+
+<h2>3. Hashing</h2>
+
+<h3>Hash Table</h3>
+<p>A data structure that maps keys to values using a hash function. Provides average-case O(1) access time.</p>
+
+<h4>Hash Function</h4>
+<p>Converts a key into an index in the hash table.</p>
+
+<h4>Collision</h4>
+<p>Occurs when two keys hash to the same index.</p>
+
+<h4>Collision Resolution</h4>
+<ul>
+  <li><strong>Chaining:</strong> Store multiple values at the same index using a linked list.</li>
+  <li><strong>Open Addressing:</strong> Probe for the next available slot (e.g., linear probing).</li>
+</ul>
+
+<h2>4. Heap</h2>
+
+<h3>Heap</h3>
+<p>A complete binary tree used to implement priority queues.</p>
+
+<h4>Min-Heap</h4>
+<p>Parent node is smaller than its children. Root is the minimum element.</p>
+
+<h4>Max-Heap</h4>
+<p>Parent node is larger than its children. Root is the maximum element.</p>
+
+<h2>5. Disjoint Set (Union-Find)</h2>
+
+<h3>Disjoint Set</h3>
+<p>A data structure that keeps track of a partition of elements into disjoint subsets.</p>
+
+<h4>Union Operation</h4>
+<p>Combines two subsets into one.</p>
+
+<h4>Find Operation</h4>
+<p>Determines which subset a particular element belongs to.</p>
+
+<h4>Path Compression</h4>
+<p>Optimizes the find operation by flattening the structure of the tree.</p>
+
+<h2>6. Matrix</h2>
+
+<h3>Matrix</h3>
+<p>A 2D array used to represent grids, graphs, and mathematical operations.</p>
+<p><strong>Example:</strong> Image processing, adjacency matrix for graphs.</p>
+
+<h2>7. Real-World Applications</h2>
+
+<ul>
+  <li><strong>Arrays:</strong> Used in image buffers, lookup tables.</li>
+  <li><strong>Linked Lists:</strong> Used in dynamic memory allocation, undo stacks.</li>
+  <li><strong>Stacks:</strong> Used in expression evaluation, function call stacks.</li>
+  <li><strong>Queues:</strong> Used in print queues, task scheduling.</li>
+  <li><strong>Trees:</strong> Used in file systems, databases, compilers.</li>
+  <li><strong>Graphs:</strong> Used in social networks, routing algorithms.</li>
+  <li><strong>Hash Tables:</strong> Used in dictionaries, caches.</li>
+  <li><strong>Heaps:</strong> Used in priority queues, heap sort.</li>
+</ul>
+
+</body>
+ </html> 
