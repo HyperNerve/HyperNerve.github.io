@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Concurrency and Synchronization - Computer Systems & Architecture</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Concurrency and Synchronization</h1>
+<p>Concurrency refers to the execution of multiple processes or threads simultaneously. Synchronization ensures that concurrent operations access shared resources safely and predictably, preventing race conditions and deadlocks.</p>
+
+<h2>1. Concurrency Concepts</h2>
+<ul>
+  <li><strong>Process:</strong> Independent execution unit with its own memory space</li>
+  <li><strong>Thread:</strong> Lightweight unit of execution within a process</li>
+  <li><strong>Multitasking:</strong> OS executes multiple processes concurrently</li>
+  <li><strong>Multithreading:</strong> Multiple threads within a single process share memory</li>
+</ul>
+
+<h2>2. Challenges in Concurrency</h2>
+<ul>
+  <li><strong>Race Condition:</strong> Two or more threads access shared data simultaneously, leading to unpredictable results</li>
+  <li><strong>Deadlock:</strong> Two or more processes wait indefinitely for each other to release resources</li>
+  <li><strong>Starvation:</strong> A process waits indefinitely due to resource monopolization by others</li>
+  <li><strong>Livelock:</strong> Processes continuously change state but make no progress</li>
+</ul>
+
+<h2>3. Critical Section Problem</h2>
+<p>A critical section is a part of code that accesses shared resources. Only one thread should execute it at a time to avoid inconsistencies.</p>
+<ul>
+  <li><strong>Requirements:</strong> Mutual exclusion, progress, bounded waiting</li>
+</ul>
+
+<h2>4. Synchronization Mechanisms</h2>
+
+<h3>4.1 Locks (Mutex)</h3>
+<ul>
+  <li>Used to enforce mutual exclusion</li>
+  <li>Only one thread can acquire the lock at a time</li>
+</ul>
+
+<h3>4.2 Semaphores</h3>
+<ul>
+  <li><strong>Binary Semaphore:</strong> Similar to a mutex (0 or 1)</li>
+  <li><strong>Counting Semaphore:</strong> Allows multiple threads to access a limited number of resources</li>
+  <li><strong>Operations:</strong> wait(P), signal(V)</li>
+</ul>
+
+<h3>4.3 Monitors</h3>
+<ul>
+  <li>High-level abstraction for synchronization</li>
+  <li>Encapsulates shared variables, procedures, and synchronization code</li>
+</ul>
+
+<h3>4.4 Spinlocks</h3>
+<ul>
+  <li>Busy-waiting lock used in low-level systems</li>
+  <li>Efficient for short critical sections but wastes CPU cycles</li>
+</ul>
+
+<h2>5. Deadlock Conditions</h2>
+<p>Deadlock occurs when a set of processes are blocked, each waiting for a resource held by another.</p>
+<ul>
+  <li><strong>Mutual Exclusion:</strong> At least one resource is non-shareable</li>
+  <li><strong>Hold and Wait:</strong> A process holds one resource and waits for another</li>
+  <li><strong>No Preemption:</strong> Resources cannot be forcibly taken</li>
+  <li><strong>Circular Wait:</strong> A closed chain of processes exists</li>
+</ul>
+
+<h2>6. Deadlock Handling Strategies</h2>
+<ul>
+  <li><strong>Prevention:</strong> Eliminate one of the necessary conditions</li>
+  <li><strong>Avoidance:</strong> Use algorithms like Banker’s Algorithm to avoid unsafe states</li>
+  <li><strong>Detection:</strong> Periodically check for deadlocks and recover</li>
+  <li><strong>Recovery:</strong> Kill or roll back processes to break the deadlock</li>
+</ul>
+
+<h2>7. Classical Synchronization Problems</h2>
+
+<h3>7.1 Producer-Consumer Problem</h3>
+<p>Producer adds items to a buffer; consumer removes them. Synchronization ensures buffer is neither overfilled nor underflowed.</p>
+
+<h3>7.2 Readers-Writers Problem</h3>
+<p>Multiple readers can read simultaneously, but writers require exclusive access.</p>
+
+<h3>7.3 Dining Philosophers Problem</h3>
+<p>Models resource sharing and deadlock among competing processes (philosophers and forks).</p>
+
+<h2>8. Thread Synchronization in Programming</h2>
+<ul>
+  <li><strong>POSIX Threads (pthreads):</strong> C/C++ thread library with mutexes and condition variables</li>
+  <li><strong>Java:</strong> `synchronized` keyword, `wait()`, `notify()`</li>
+  <li><strong>Python:</strong> `threading.Lock`, `threading.Semaphore`</li>
+</ul>
+
+<h2>9. Real-Time Synchronization</h2>
+<ul>
+  <li>Uses priority inheritance to avoid priority inversion</li>
+  <li>Requires bounded blocking and deterministic behavior</li>
+</ul>
+
+<h2>10. Performance Considerations</h2>
+<ul>
+  <li>Minimize lock contention</li>
+  <li>Use lock-free or wait-free algorithms where possible</li>
+  <li>Balance granularity of locking (coarse vs fine)</li>
+</ul>
+
+</body>
+        </html>
