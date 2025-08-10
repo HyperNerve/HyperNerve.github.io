@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Complexity Theory - Theoretical Computer Science</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
+<h1>Complexity Theory</h1>
+<p>Complexity Theory studies the resources required to solve computational problems, such as time, space, and parallelism. It classifies problems based on their inherent difficulty and the efficiency of algorithms that solve them.</p>
+
+<h2>1. Complexity Measures</h2>
+
+<ul>
+  <li><strong>Time Complexity:</strong> Number of steps an algorithm takes as a function of input size.</li>
+  <li><strong>Space Complexity:</strong> Amount of memory used as a function of input size.</li>
+  <li><strong>Communication Complexity:</strong> Amount of communication required between parties to solve a problem.</li>
+</ul>
+
+<h2>2. Asymptotic Notation</h2>
+
+<ul>
+  <li><strong>Big O (O):</strong> Upper bound on growth rate. Example: O(n²)</li>
+  <li><strong>Big Omega (Ω):</strong> Lower bound. Example: Ω(n)</li>
+  <li><strong>Big Theta (Θ):</strong> Tight bound. Example: Θ(n log n)</li>
+</ul>
+
+<h2>3. Complexity Classes</h2>
+
+<h3>P (Polynomial Time)</h3>
+<p>Problems solvable in polynomial time by a deterministic Turing machine.</p>
+<p><strong>Example:</strong> Sorting, shortest path in a graph (Dijkstra’s algorithm).</p>
+
+<h3>NP (Nondeterministic Polynomial Time)</h3>
+<p>Problems for which a solution can be verified in polynomial time.</p>
+<p><strong>Example:</strong> Boolean satisfiability (SAT), subset sum.</p>
+
+<h3>co-NP</h3>
+<p>Problems whose complement is in NP.</p>
+
+<h3>EXP (Exponential Time)</h3>
+<p>Problems solvable in exponential time. Example: brute-force search over all subsets.</p>
+
+<h3>PSPACE</h3>
+<p>Problems solvable using polynomial space.</p>
+
+<h3>NL (Nondeterministic Logarithmic Space)</h3>
+<p>Problems solvable with logarithmic space on a nondeterministic machine.</p>
+
+<h2>4. P vs NP Problem</h2>
+
+<h3>Statement</h3>
+<p>Is every problem whose solution can be verified in polynomial time also solvable in polynomial time?</p>
+
+<h3>Importance</h3>
+<p>One of the seven Millennium Prize Problems. Solving it would revolutionize cryptography, optimization, and more.</p>
+
+<h3>Current Status</h3>
+<p>Open problem. Most experts believe P ≠ NP, but no proof exists.</p>
+
+<h2>5. NP-Complete Problems</h2>
+
+<h3>Definition</h3>
+<p>Problems in NP to which every other NP problem can be reduced in polynomial time.</p>
+
+<h3>Examples</h3>
+<ul>
+  <li>SAT (Boolean satisfiability)</li>
+  <li>3-SAT</li>
+  <li>Traveling Salesman Problem (decision version)</li>
+  <li>Knapsack Problem</li>
+</ul>
+
+<h3>Cook-Levin Theorem</h3>
+<p>Proved that SAT is NP-complete, establishing the first known NP-complete problem.</p>
+
+<h2>6. Reductions in Complexity</h2>
+
+<h3>Polynomial-Time Reduction</h3>
+<p>Transforms one problem into another in polynomial time. Used to show NP-completeness.</p>
+
+<h3>Example:</h3>
+<p>Reducing 3-SAT to CLIQUE to prove CLIQUE is NP-complete.</p>
+
+<h2>7. Hierarchies and Relationships</h2>
+
+<ul>
+  <li>P ⊆ NP ⊆ PSPACE ⊆ EXP</li>
+  <li>NL ⊆ P</li>
+  <li>co-NP and NP may or may not be equal</li>
+</ul>
+
+<h2>8. Space Complexity Classes</h2>
+
+<ul>
+  <li><strong>L:</strong> Logarithmic space</li>
+  <li><strong>NL:</strong> Nondeterministic logarithmic space</li>
+  <li><strong>PSPACE:</strong> Polynomial space</li>
+  <li><strong>NPSPACE:</strong> Nondeterministic polynomial space</li>
+</ul>
+
+<h2>9. Time-Space Tradeoffs</h2>
+<p>Some problems can be solved faster with more memory, or with less memory but more time.</p>
+
+<h2>10. Real-World Implications</h2>
+
+<ul>
+  <li><strong>Cryptography:</strong> Relies on hardness of problems like factoring and discrete log.</li>
+  <li><strong>Optimization:</strong> NP-complete problems arise in logistics, scheduling, and AI.</li>
+  <li><strong>Machine Learning:</strong> Training models often involves solving hard optimization problems.</li>
+</ul>
+
+<h2>11. Advanced Topics</h2>
+
+<ul>
+  <li><strong>Parameterized Complexity:</strong> Studies complexity with respect to multiple parameters.</li>
+  <li><strong>Approximation Algorithms:</strong> Efficient algorithms that find near-optimal solutions to hard problems.</li>
+  <li><strong>Randomized Complexity:</strong> Uses randomness to solve problems faster (e.g., BPP class).</li>
+  <li><strong>Quantum Complexity:</strong> Studies problems solvable efficiently by quantum computers (e.g., BQP).</li>
+</ul>
+
+</body>
+</html>
