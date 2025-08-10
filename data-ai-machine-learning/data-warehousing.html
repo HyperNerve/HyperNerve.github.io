@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Warehousing and OLAP - Data, AI & Machine Learning</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Data Warehousing and OLAP</h1>
+<p>Data warehousing is the process of collecting, storing, and managing large volumes of structured data for analysis and reporting. OLAP (Online Analytical Processing) enables multidimensional analysis of this data to support decision-making.</p>
+
+<h2>1. What is a Data Warehouse?</h2>
+<ul>
+  <li><strong>Central Repository:</strong> Stores integrated data from multiple sources</li>
+  <li><strong>Historical Data:</strong> Optimized for read-heavy analytical queries</li>
+  <li><strong>ETL Process:</strong> Extract, Transform, Load pipeline used to populate warehouse</li>
+</ul>
+
+<h2>2. Characteristics of Data Warehouses</h2>
+<ul>
+  <li><strong>Subject-Oriented:</strong> Organized around key business areas</li>
+  <li><strong>Time-Variant:</strong> Maintains historical snapshots</li>
+  <li><strong>Non-Volatile:</strong> Data is stable and not frequently updated</li>
+</ul>
+
+<h2>3. OLAP Overview</h2>
+<ul>
+  <li><strong>Multidimensional Analysis:</strong> View data across multiple dimensions (e.g., time, region, product)</li>
+  <li><strong>Operations:</strong> Roll-up, drill-down, slice, dice, pivot</li>
+  <li><strong>OLAP Cubes:</strong> Pre-aggregated data structures for fast querying</li>
+</ul>
+
+<h2>4. OLAP Operations</h2>
+<table border="1">
+  <tr>
+    <th>Operation</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Roll-up</td>
+    <td>Aggregate data (e.g., daily → monthly)</td>
+  </tr>
+  <tr>
+    <td>Drill-down</td>
+    <td>View more detailed data (e.g., yearly → quarterly)</td>
+  </tr>
+  <tr>
+    <td>Slice</td>
+    <td>Filter by one dimension (e.g., region = 'Asia')</td>
+  </tr>
+  <tr>
+    <td>Dice</td>
+    <td>Filter by multiple dimensions</td>
+  </tr>
+  <tr>
+    <td>Pivot</td>
+    <td>Reorient dimensions for different views</td>
+  </tr>
+</table>
+
+<h2>5. ETL Pipeline Example</h2>
+<pre>
+Extract: Pull data from CRM, ERP, logs
+Transform: Clean, normalize, enrich
+Load: Insert into warehouse tables
+</pre>
+
+<h2>6. Data Warehouse Architectures</h2>
+<ul>
+  <li><strong>Top-down:</strong> Centralized warehouse with dependent data marts</li>
+  <li><strong>Bottom-up:</strong> Independent data marts integrated into warehouse</li>
+  <li><strong>Hybrid:</strong> Combines both approaches</li>
+</ul>
+
+<h2>7. OLAP Types</h2>
+<ul>
+  <li><strong>MOLAP:</strong> Multidimensional OLAP (pre-computed cubes)</li>
+  <li><strong>ROLAP:</strong> Relational OLAP (queries relational tables)</li>
+  <li><strong>HOLAP:</strong> Hybrid OLAP (combines MOLAP and ROLAP)</li>
+</ul>
+
+<h2>8. Tools & Platforms</h2>
+<ul>
+  <li><strong>Data Warehousing:</strong> Amazon Redshift, Snowflake, Google BigQuery</li>
+  <li><strong>OLAP Engines:</strong> Apache Kylin, Microsoft SSAS, SAP BW</li>
+</ul>
+
+</body>
+</html>
