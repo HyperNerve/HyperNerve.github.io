@@ -7,67 +7,95 @@
 <body>
 
 <h1>Process Scheduling</h1>
-<p>Process scheduling is the mechanism by which an operating system decides which process runs at any given time. It ensures fair CPU allocation, maximizes efficiency, and maintains system responsiveness.</p>
+<p>Process scheduling is the method by which an operating system decides the order in which processes access the CPU. It is essential for multitasking, responsiveness, and efficient resource utilization. The scheduler selects one process from the ready queue and allocates the CPU to it.</p>
 
-<h2>1. Goals of Scheduling</h2>
+<h2>1. Objectives of Process Scheduling</h2>
+<p>The scheduler aims to:</p>
 <ul>
-  <li>Maximize CPU utilization</li>
-  <li>Minimize waiting and turnaround time</li>
-  <li>Ensure fairness among processes</li>
-  <li>Support multitasking and responsiveness</li>
+  <li><strong>Maximize CPU utilization:</strong> Keep the processor busy as much as possible</li>
+  <li><strong>Minimize waiting time:</strong> Reduce time spent in the ready queue</li>
+  <li><strong>Minimize turnaround time:</strong> Speed up overall job completion</li>
+  <li><strong>Ensure fairness:</strong> Prevent starvation and give each process a chance</li>
+  <li><strong>Support real-time constraints:</strong> Meet deadlines in time-sensitive systems</li>
 </ul>
 
-<h2>2. Scheduling Criteria</h2>
+<h2>2. Types of Schedulers</h2>
 <ul>
-  <li><strong>CPU Utilization:</strong> Keep CPU busy as much as possible</li>
+  <li><strong>Long-Term Scheduler:</strong> Controls which processes are admitted to the system. It regulates the degree of multiprogramming.</li>
+  <li><strong>Short-Term Scheduler:</strong> Also called the CPU scheduler. It selects from the ready queue and allocates CPU to one process.</li>
+  <li><strong>Medium-Term Scheduler:</strong> Handles swapping. Suspends and resumes processes to balance load and memory usage.</li>
+</ul>
+
+<h2>3. Scheduling Algorithms</h2>
+
+<h3>3.1 First-Come, First-Served (FCFS)</h3>
+<p>Processes are executed in the order they arrive. Simple but can lead to long waiting times for short jobs if a long job arrives first.</p>
+<pre>
+Example:
+Arrival Order: P1 (10ms), P2 (2ms), P3 (1ms)
+Execution: P1 → P2 → P3
+Waiting Time: P1=0, P2=10, P3=12
+</pre>
+
+<h3>3.2 Shortest Job First (SJF)</h3>
+<p>Executes the process with the shortest burst time first. Optimal for minimizing average waiting time but can cause starvation for long jobs.</p>
+
+<h3>3.3 Round Robin (RR)</h3>
+<p>Each process gets a fixed time slice (quantum). After the time expires, the process is preempted and placed at the end of the queue.</p>
+<pre>
+Quantum = 4ms
+Queue: P1(10ms), P2(5ms), P3(7ms)
+Execution: P1→P2→P3→P1→P3→P1
+</pre>
+
+<h3>3.4 Priority Scheduling</h3>
+<p>Each process is assigned a priority. Higher priority processes are executed first. Can be preemptive or non-preemptive.</p>
+<p><strong>Issue:</strong> Starvation of low-priority processes. <strong>Solution:</strong> Aging — gradually increase priority of waiting processes.</p>
+
+<h3>3.5 Multilevel Queue Scheduling</h3>
+<p>Processes are divided into multiple queues based on type (e.g., system, interactive, batch). Each queue has its own scheduling algorithm.</p>
+
+<h3>3.6 Multilevel Feedback Queue</h3>
+<p>Similar to multilevel queue but allows processes to move between queues based on behavior and history. More flexible and adaptive.</p>
+
+<h2>4. Preemptive vs Non-Preemptive Scheduling</h2>
+<ul>
+  <li><strong>Preemptive:</strong> Scheduler can interrupt a running process to assign CPU to another (e.g., RR, SJF-preemptive)</li>
+  <li><strong>Non-Preemptive:</strong> Once a process starts, it runs to completion (e.g., FCFS, SJF-non-preemptive)</li>
+</ul>
+
+<h2>5. Context Switching</h2>
+<p>When the CPU switches from one process to another, it saves the current state and loads the new process state. This is called context switching.</p>
+<ul>
+  <li><strong>Overhead:</strong> Context switching consumes CPU cycles and memory bandwidth</li>
+  <li><strong>Trade-off:</strong> Enables multitasking but reduces throughput if done excessively</li>
+</ul>
+
+<h2>6. Real-Time Scheduling</h2>
+<p>Used in systems where timing is critical (e.g., medical devices, avionics).</p>
+<ul>
+  <li><strong>Hard Real-Time:</strong> Missing a deadline can cause system failure</li>
+  <li><strong>Soft Real-Time:</strong> Deadlines are important but not catastrophic if missed</li>
+</ul>
+
+<h3>Common Algorithms</h3>
+<ul>
+  <li><strong>Rate Monotonic Scheduling (RMS):</strong> Fixed priority based on frequency</li>
+  <li><strong>Earliest Deadline First (EDF):</strong> Dynamic priority based on deadline</li>
+</ul>
+
+<h2>7. Performance Metrics</h2>
+<ul>
+  <li><strong>CPU Utilization:</strong> % of time CPU is active</li>
   <li><strong>Throughput:</strong> Number of processes completed per unit time</li>
-  <li><strong>Turnaround Time:</strong> Total time from submission to completion</li>
+  <li><strong>Turnaround Time:</strong> Completion time - arrival time</li>
   <li><strong>Waiting Time:</strong> Time spent in ready queue</li>
-  <li><strong>Response Time:</strong> Time from submission to first response</li>
+  <li><strong>Response Time:</strong> Time from submission to first output</li>
 </ul>
 
-<h2>3. Types of Schedulers</h2>
-<ul>
-  <li><strong>Long-Term Scheduler:</strong> Controls admission of jobs into system</li>
-  <li><strong>Short-Term Scheduler:</strong> Selects process for CPU execution</li>
-  <li><strong>Medium-Term Scheduler:</strong> Handles swapping of processes</li>
-</ul>
-
-<h2>4. Scheduling Algorithms</h2>
-<ul>
-  <li><strong>First-Come, First-Served (FCFS):</strong> Processes executed in arrival order</li>
-  <li><strong>Shortest Job First (SJF):</strong> Executes shortest process first</li>
-  <li><strong>Round Robin (RR):</strong> Time-sliced execution for fairness</li>
-  <li><strong>Priority Scheduling:</strong> Higher priority processes run first</li>
-  <li><strong>Multilevel Queue:</strong> Separate queues for different process types</li>
-  <li><strong>Multilevel Feedback Queue:</strong> Dynamic adjustment of process priority</li>
-</ul>
-
-<h2>5. Preemptive vs Non-Preemptive</h2>
-<ul>
-  <li><strong>Preemptive:</strong> Allows interruption of running process</li>
-  <li><strong>Non-Preemptive:</strong> Process runs until completion or voluntary yield</li>
-</ul>
-
-<h2>6. Context Switching</h2>
-<ul>
-  <li>Saving and restoring process state during switch</li>
-  <li>Introduces overhead but enables multitasking</li>
-</ul>
-
-<h2>7. Real-Time Scheduling</h2>
-<ul>
-  <li><strong>Hard Real-Time:</strong> Deadlines must be met</li>
-  <li><strong>Soft Real-Time:</strong> Deadlines preferred but not mandatory</li>
-  <li><strong>Algorithms:</strong> Rate Monotonic, Earliest Deadline First</li>
-</ul>
-
-<h2>8. Performance Trade-offs</h2>
-<ul>
-  <li>Balancing throughput vs responsiveness</li>
-  <li>Avoiding starvation and ensuring fairness</li>
-  <li>Minimizing context switch overhead</li>
-</ul>
+<h2>8. Starvation and Aging</h2>
+<p><strong>Starvation:</strong> A process waits indefinitely due to low priority or queue position.</p>
+<p><strong>Aging:</strong> Gradually increases priority of waiting processes to prevent starvation.</p>
 
 </body>
 </html>
