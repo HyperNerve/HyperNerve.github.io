@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Graph Theory - Theoretical Computer Science</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
+<h1>Graph Theory</h1>
+<p>Graph Theory studies mathematical structures used to model pairwise relations between objects. A graph consists of vertices (nodes) and edges (connections), and is widely used in computer science for modeling networks, dependencies, and algorithms.</p>
+
+<h2>1. Basic Definitions</h2>
+
+<ul>
+  <li><strong>Vertex (Node):</strong> Fundamental unit of a graph</li>
+  <li><strong>Edge:</strong> Connection between two vertices</li>
+  <li><strong>Graph:</strong> G = (V, E), where V is a set of vertices and E is a set of edges</li>
+  <li><strong>Degree:</strong> Number of edges incident to a vertex</li>
+</ul>
+
+<h2>2. Types of Graphs</h2>
+
+<ul>
+  <li><strong>Undirected Graph:</strong> Edges have no direction</li>
+  <li><strong>Directed Graph (Digraph):</strong> Edges have direction (u → v)</li>
+  <li><strong>Weighted Graph:</strong> Edges have weights or costs</li>
+  <li><strong>Simple Graph:</strong> No loops or multiple edges</li>
+  <li><strong>Multigraph:</strong> May have multiple edges between same vertices</li>
+  <li><strong>Complete Graph (Kₙ):</strong> Every pair of vertices is connected</li>
+  <li><strong>Bipartite Graph:</strong> Vertices can be divided into two disjoint sets with edges only between sets</li>
+</ul>
+
+<h2>3. Graph Representations</h2>
+
+<ul>
+  <li><strong>Adjacency Matrix:</strong> 2D array indicating edge presence</li>
+  <li><strong>Adjacency List:</strong> List of neighbors for each vertex</li>
+  <li><strong>Edge List:</strong> List of all edges as pairs (u, v)</li>
+</ul>
+
+<h2>4. Graph Traversal Algorithms</h2>
+
+<h3>Breadth-First Search (BFS)</h3>
+<ul>
+  <li>Explores neighbors level by level</li>
+  <li>Uses a queue</li>
+  <li>Used for shortest path in unweighted graphs</li>
+</ul>
+
+<h3>Depth-First Search (DFS)</h3>
+<ul>
+  <li>Explores as deep as possible before backtracking</li>
+  <li>Uses a stack or recursion</li>
+  <li>Used for cycle detection, topological sort</li>
+</ul>
+
+<h2>5. Connectivity</h2>
+
+<ul>
+  <li><strong>Connected Graph:</strong> Path exists between every pair of vertices</li>
+  <li><strong>Strongly Connected (Directed):</strong> Path exists in both directions for every pair</li>
+  <li><strong>Components:</strong> Maximal connected subgraphs</li>
+</ul>
+
+<h2>6. Trees and Forests</h2>
+
+<ul>
+  <li><strong>Tree:</strong> A connected acyclic graph</li>
+  <li><strong>Rooted Tree:</strong> Tree with a designated root node</li>
+  <li><strong>Binary Tree:</strong> Each node has ≤ 2 children</li>
+  <li><strong>Forest:</strong> A collection of disjoint trees</li>
+</ul>
+
+<h2>7. Cycles and Acyclic Graphs</h2>
+
+<ul>
+  <li><strong>Cycle:</strong> A path that starts and ends at the same vertex</li>
+  <li><strong>Acyclic Graph:</strong> No cycles</li>
+  <li><strong>DAG (Directed Acyclic Graph):</strong> Used in scheduling, dependency resolution</li>
+</ul>
+
+<h2>8. Graph Coloring</h2>
+
+<ul>
+  <li><strong>Vertex Coloring:</strong> Assign colors to vertices so adjacent vertices differ</li>
+  <li><strong>Chromatic Number:</strong> Minimum number of colors needed</li>
+  <li><strong>Applications:</strong> Scheduling, register allocation</li>
+</ul>
+
+<h2>9. Planar Graphs</h2>
+
+<ul>
+  <li><strong>Planar Graph:</strong> Can be drawn without edge crossings</li>
+  <li><strong>Kuratowski’s Theorem:</strong> Characterizes non-planar graphs</li>
+</ul>
+
+<h2>10. Graph Algorithms</h2>
+
+<ul>
+  <li><strong>Dijkstra’s Algorithm:</strong> Shortest path in weighted graphs</li>
+  <li><strong>Bellman-Ford:</strong> Handles negative weights</li>
+  <li><strong>Floyd-Warshall:</strong> All-pairs shortest paths</li>
+  <li><strong>Kruskal’s Algorithm:</strong> Minimum spanning tree using edge sorting</li>
+  <li><strong>Prim’s Algorithm:</strong> Minimum spanning tree using greedy expansion</li>
+  <li><strong>Topological Sort:</strong> Linear ordering of DAG vertices</li>
+</ul>
+
+<h2>11. Applications</h2>
+
+<ul>
+  <li><strong>Computer Networks:</strong> Routing and connectivity</li>
+  <li><strong>Social Networks:</strong> Modeling relationships</li>
+  <li><strong>Compiler Design:</strong> Dependency graphs, register allocation</li>
+  <li><strong>AI:</strong> Search algorithms, constraint graphs</li>
+  <li><strong>Biology:</strong> Protein interaction networks</li>
+</ul>
+
+</body>
+  </html>
