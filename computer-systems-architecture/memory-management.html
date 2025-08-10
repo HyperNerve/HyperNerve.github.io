@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Memory Management - Computer Systems & Architecture</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Memory Management</h1>
+<p>Memory management is a core function of the operating system that handles the allocation, tracking, and optimization of system memory. It ensures efficient use of RAM and provides isolation between processes.</p>
+
+<h2>1. Objectives</h2>
+<ul>
+  <li>Efficient memory allocation and deallocation</li>
+  <li>Protection and isolation between processes</li>
+  <li>Support for multitasking and virtual memory</li>
+  <li>Minimization of fragmentation</li>
+</ul>
+
+<h2>2. Types of Memory</h2>
+<ul>
+  <li><strong>Primary Memory:</strong> RAM, cache</li>
+  <li><strong>Secondary Memory:</strong> HDD, SSD</li>
+  <li><strong>Virtual Memory:</strong> Disk space used as RAM extension</li>
+</ul>
+
+<h2>3. Memory Allocation Techniques</h2>
+<ul>
+  <li><strong>Contiguous Allocation:</strong> Each process gets a single continuous block</li>
+  <li><strong>Non-Contiguous Allocation:</strong> Memory divided into segments or pages</li>
+  <li><strong>Dynamic Allocation:</strong> Memory assigned at runtime</li>
+</ul>
+
+<h2>4. Paging</h2>
+<ul>
+  <li>Divides memory into fixed-size pages</li>
+  <li>Uses page tables to map virtual to physical addresses</li>
+  <li>Eliminates external fragmentation</li>
+</ul>
+
+<h2>5. Segmentation</h2>
+<ul>
+  <li>Divides memory into variable-sized segments</li>
+  <li>Each segment has a base and limit</li>
+  <li>Supports logical division (code, data, stack)</li>
+</ul>
+
+<h2>6. Virtual Memory</h2>
+<ul>
+  <li>Allows execution of processes larger than physical memory</li>
+  <li>Uses disk as an extension of RAM</li>
+  <li>Implemented via paging and swapping</li>
+</ul>
+
+<h2>7. Fragmentation</h2>
+<ul>
+  <li><strong>External Fragmentation:</strong> Free memory scattered in small blocks</li>
+  <li><strong>Internal Fragmentation:</strong> Unused space within allocated blocks</li>
+</ul>
+
+<h2>8. Memory Protection</h2>
+<ul>
+  <li>Prevents unauthorized access between processes</li>
+  <li>Uses base and limit registers or page-level permissions</li>
+</ul>
+
+<h2>9. Swapping</h2>
+<ul>
+  <li>Temporarily moves inactive processes to disk</li>
+  <li>Frees up RAM for active processes</li>
+</ul>
+
+<h2>10. Allocation Algorithms</h2>
+<ul>
+  <li><strong>First Fit:</strong> Allocates first suitable block</li>
+  <li><strong>Best Fit:</strong> Allocates smallest suitable block</li>
+  <li><strong>Worst Fit:</strong> Allocates largest available block</li>
+</ul>
+
+</body>
+</html>
