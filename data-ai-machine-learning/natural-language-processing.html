@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Natural Language Processing - Data, AI & Machine Learning</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Natural Language Processing (NLP)</h1>
+<p>NLP is a field of AI that focuses on the interaction between computers and human language. It enables machines to understand, interpret, generate, and respond to text or speech in a meaningful way.</p>
+
+<h2>1. Core Tasks in NLP</h2>
+<ul>
+  <li><strong>Text Classification</strong>
+    <ul>
+      <li>Spam detection</li>
+      <li>Sentiment analysis</li>
+    </ul>
+  </li>
+  <li><strong>Named Entity Recognition (NER)</strong>
+    <ul>
+      <li>Identify names, dates, locations in text</li>
+    </ul>
+  </li>
+  <li><strong>Part-of-Speech Tagging</strong>
+    <ul>
+      <li>Label words as noun, verb, adjective, etc.</li>
+    </ul>
+  </li>
+  <li><strong>Machine Translation</strong>
+    <ul>
+      <li>Convert text from one language to another</li>
+    </ul>
+  </li>
+  <li><strong>Text Summarization</strong>
+    <ul>
+      <li>Generate concise versions of long documents</li>
+    </ul>
+  </li>
+  <li><strong>Question Answering</strong>
+    <ul>
+      <li>Answer queries based on context or documents</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>2. NLP Pipeline</h2>
+<ol>
+  <li><strong>Text Input:</strong> Raw text or speech</li>
+  <li><strong>Tokenization:</strong> Split text into words or sentences</li>
+  <li><strong>Normalization:</strong> Lowercasing, removing punctuation</li>
+  <li><strong>Stopword Removal:</strong> Eliminate common words (e.g., "the", "is")</li>
+  <li><strong>Stemming/Lemmatization:</strong> Reduce words to root form</li>
+  <li><strong>Vectorization:</strong> Convert text to numerical format</li>
+  <li><strong>Modeling:</strong> Apply ML or DL models</li>
+</ol>
+
+<h2>3. Common Techniques</h2>
+<ul>
+  <li><strong>Bag of Words (BoW):</strong> Represent text by word frequency</li>
+  <li><strong>TF-IDF:</strong> Weight words by importance across documents</li>
+  <li><strong>Word Embeddings:</strong> Use dense vectors (e.g., Word2Vec, GloVe)</li>
+  <li><strong>Transformers:</strong> Context-aware models (e.g., BERT, GPT)</li>
+</ul>
+
+<h2>4. Example: Sentiment Analysis</h2>
+<pre>
+Input: "I absolutely loved the movie!"
+Process:
+  - Tokenize: ["I", "absolutely", "loved", "the", "movie"]
+  - Remove stopwords: ["absolutely", "loved", "movie"]
+  - Vectorize and classify: → Positive sentiment
+</pre>
+
+<h2>5. Example: Named Entity Recognition</h2>
+<pre>
+Input: "Dr. Singh visited Delhi on 5th August."
+Output:
+  - Person: Dr. Singh
+  - Location: Delhi
+  - Date: 5th August
+</pre>
+
+<h2>6. Popular Libraries</h2>
+<ul>
+  <li><strong>spaCy:</strong> Industrial-strength NLP toolkit</li>
+  <li><strong>NLTK:</strong> Academic and educational NLP library</li>
+  <li><strong>Transformers (Hugging Face):</strong> Pretrained models for advanced tasks</li>
+  <li><strong>TextBlob:</strong> Simple API for common NLP tasks</li>
+</ul>
+
+<h2>7. Challenges</h2>
+<ul>
+  <li><strong>Ambiguity:</strong> Words with multiple meanings</li>
+  <li><strong>Context Sensitivity:</strong> Meaning changes with usage</li>
+  <li><strong>Multilingual Support:</strong> Handling diverse languages</li>
+  <li><strong>Bias in Training Data:</strong> Risk of unfair outputs</li>
+</ul>
+
+<h2>8. Applications</h2>
+<ul>
+  <li><strong>Search Engines:</strong> Query understanding</li>
+  <li><strong>Voice Assistants:</strong> Speech-to-text and intent recognition</li>
+  <li><strong>Customer Support:</strong> Chatbots and automated replies</li>
+  <li><strong>Legal & Medical:</strong> Document summarization and analysis</li>
+</ul>
+
+</body>
+    </html>
