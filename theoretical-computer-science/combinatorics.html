@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Combinatorics - Theoretical Computer Science</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
+<h1>Combinatorics</h1>
+<p>Combinatorics is the study of counting, arrangement, and selection of discrete objects. It provides tools for analyzing algorithms, data structures, and probabilistic models in computer science.</p>
+
+<h2>1. Basic Counting Principles</h2>
+
+<ul>
+  <li><strong>Sum Rule:</strong> If task A can be done in m ways and task B in n ways, and they are mutually exclusive, total = m + n</li>
+  <li><strong>Product Rule:</strong> If task A can be done in m ways and task B in n ways, total = m × n</li>
+</ul>
+
+<h2>2. Permutations</h2>
+
+<ul>
+  <li><strong>Definition:</strong> Ordered arrangements of objects</li>
+  <li><strong>Formula:</strong> P(n, r) = n! / (n − r)!</li>
+  <li><strong>Example:</strong> Ways to arrange 3 out of 5 books</li>
+</ul>
+
+<h2>3. Combinations</h2>
+
+<ul>
+  <li><strong>Definition:</strong> Unordered selections of objects</li>
+  <li><strong>Formula:</strong> C(n, r) = n! / (r!(n − r)!)</li>
+  <li><strong>Example:</strong> Ways to choose 3 fruits from 5</li>
+</ul>
+
+<h2>4. Binomial Theorem</h2>
+
+<p>Expands powers of binomial expressions:</p>
+<pre>
+(a + b)ⁿ = Σ (n choose k) aⁿ⁻ᵏ bᵏ
+</pre>
+
+<h2>5. Pigeonhole Principle</h2>
+
+<p>If n items are placed into m containers and n > m, then at least one container has more than one item.</p>
+
+<h3>Example:</h3>
+<p>In a group of 13 people, at least two share a birth month.</p>
+
+<h2>6. Inclusion-Exclusion Principle</h2>
+
+<p>Used to count elements in the union of overlapping sets:</p>
+<pre>
+|A ∪ B| = |A| + |B| − |A ∩ B|
+</pre>
+
+<h3>General Form:</h3>
+<pre>
+|A₁ ∪ A₂ ∪ ... ∪ Aₙ| = Σ|Aᵢ| − Σ|Aᵢ ∩ Aⱼ| + Σ|Aᵢ ∩ Aⱼ ∩ Aₖ| − ...
+</pre>
+
+<h2>7. Combinatorial Proofs</h2>
+
+<p>Prove identities by interpreting both sides as counting the same set in different ways.</p>
+
+<h3>Example:</h3>
+<pre>
+C(n, r) = C(n − 1, r − 1) + C(n − 1, r)
+</pre>
+<p>Choose r items from n: either include a specific item or not.</p>
+
+<h2>8. Recurrence Relations</h2>
+
+<ul>
+  <li><strong>Definition:</strong> Equations that define sequences recursively</li>
+  <li><strong>Example:</strong> Fibonacci: F(n) = F(n − 1) + F(n − 2)</li>
+  <li><strong>Solving:</strong> Use iteration, characteristic equations, or generating functions</li>
+</ul>
+
+<h2>9. Generating Functions</h2>
+
+<p>Formal power series used to encode sequences and solve recurrence relations.</p>
+
+<h3>Example:</h3>
+<pre>
+G(x) = a₀ + a₁x + a₂x² + ...
+</pre>
+
+<h2>10. Catalan Numbers</h2>
+
+<ul>
+  <li><strong>Definition:</strong> Count certain recursive structures</li>
+  <li><strong>Formula:</strong> Cₙ = (1 / (n + 1)) × C(2n, n)</li>
+  <li><strong>Applications:</strong> Parenthesizations, binary trees, Dyck paths</li>
+</ul>
+
+<h2>11. Partitions and Compositions</h2>
+
+<ul>
+  <li><strong>Partition:</strong> Ways to write n as a sum of positive integers (order doesn't matter)</li>
+  <li><strong>Composition:</strong> Ordered partitions of n</li>
+</ul>
+
+<h2>12. Applications</h2>
+
+<ul>
+  <li><strong>Algorithm Analysis:</strong> Counting operations, recursion depth</li>
+  <li><strong>Cryptography:</strong> Combinatorial designs and key generation</li>
+  <li><strong>Probability:</strong> Sample space enumeration</li>
+  <li><strong>Data Structures:</strong> Tree shapes, heap configurations</li>
+</ul>
+
+</body>
+</html>
