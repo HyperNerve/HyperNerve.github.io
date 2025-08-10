@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Database Management Systems - Data, AI & Machine Learning</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Database Management Systems (DBMS)</h1>
+<p>A Database Management System is software that enables users to define, create, maintain, and control access to databases. It ensures data integrity, security, and efficient retrieval.</p>
+
+<h2>1. Goals of DBMS</h2>
+<ul>
+  <li><strong>Data Storage:</strong> Organize and persist data</li>
+  <li><strong>Data Retrieval:</strong> Efficient querying and access</li>
+  <li><strong>Data Integrity:</strong> Ensure accuracy and consistency</li>
+  <li><strong>Security:</strong> Control access and protect data</li>
+</ul>
+
+<h2>2. Components of DBMS</h2>
+<ul>
+  <li><strong>Database Engine:</strong> Core service for data storage and retrieval</li>
+  <li><strong>Query Processor:</strong> Parses and executes queries</li>
+  <li><strong>Transaction Manager:</strong> Ensures ACID properties</li>
+  <li><strong>Storage Manager:</strong> Manages physical data storage</li>
+</ul>
+
+<h2>3. Types of DBMS</h2>
+<ul>
+  <li><strong>Relational DBMS (RDBMS):</strong> Structured data in tables (e.g., MySQL, PostgreSQL)</li>
+  <li><strong>NoSQL DBMS:</strong> Unstructured or semi-structured data (e.g., MongoDB, Cassandra)</li>
+  <li><strong>Hierarchical DBMS:</strong> Tree-like structure (e.g., IBM IMS)</li>
+  <li><strong>Network DBMS:</strong> Graph-like relationships (e.g., Integrated Data Store)</li>
+</ul>
+
+<h2>4. Relational Model Example</h2>
+<pre>
+Table: Students
++----+--------+------+
+| ID | Name   | Age  |
++----+--------+------+
+| 1  | Alice  | 20   |
+| 2  | Bob    | 22   |
+</pre>
+
+<h2>5. SQL Overview</h2>
+<ul>
+  <li><strong>DDL (Data Definition Language):</strong> CREATE, ALTER, DROP</li>
+  <li><strong>DML (Data Manipulation Language):</strong> SELECT, INSERT, UPDATE, DELETE</li>
+  <li><strong>DCL (Data Control Language):</strong> GRANT, REVOKE</li>
+</ul>
+
+<h2>6. SQL Example</h2>
+<pre>
+CREATE TABLE Students (
+  ID INT PRIMARY KEY,
+  Name VARCHAR(50),
+  Age INT
+);
+
+INSERT INTO Students VALUES (1, 'Alice', 20);
+SELECT * FROM Students WHERE Age > 21;
+</pre>
+
+<h2>7. ACID Properties</h2>
+<ul>
+  <li><strong>Atomicity:</strong> All or nothing transactions</li>
+  <li><strong>Consistency:</strong> Maintain valid state</li>
+  <li><strong>Isolation:</strong> Concurrent transactions don’t interfere</li>
+  <li><strong>Durability:</strong> Changes persist after commit</li>
+</ul>
+
+<h2>8. Indexing</h2>
+<ul>
+  <li><strong>Purpose:</strong> Speed up data retrieval</li>
+  <li><strong>Types:</strong> B-tree, hash, composite</li>
+</ul>
+
+<h2>9. Transactions Example</h2>
+<pre>
+BEGIN;
+UPDATE Accounts SET balance = balance - 100 WHERE ID = 1;
+UPDATE Accounts SET balance = balance + 100 WHERE ID = 2;
+COMMIT;
+</pre>
+
+<h2>10. DBMS Tools</h2>
+<ul>
+  <li><strong>MySQL:</strong> Open-source RDBMS</li>
+  <li><strong>PostgreSQL:</strong> Advanced SQL features</li>
+  <li><strong>MongoDB:</strong> Document-based NoSQL</li>
+  <li><strong>SQLite:</strong> Lightweight embedded database</li>
+</ul>
+
+</body>
+  </html>
