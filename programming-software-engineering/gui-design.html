@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GUI Design and Development - Programming & Software Engineering</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>GUI Design and Development</h1>
+<p>Graphical User Interface (GUI) design and development involves creating visual interfaces that allow users to interact with software through graphical elements like buttons, menus, and windows. It combines aesthetics, usability, and functionality.</p>
+
+<h2>1. Goals of GUI Design</h2>
+<ul>
+  <li><strong>Intuitiveness:</strong> Easy to understand and use</li>
+  <li><strong>Responsiveness:</strong> Immediate feedback to user actions</li>
+  <li><strong>Consistency:</strong> Uniform layout and behavior</li>
+  <li><strong>Accessibility:</strong> Inclusive for all users</li>
+</ul>
+
+<h2>2. GUI Components</h2>
+<ul>
+  <li><strong>Windows:</strong> Containers for content</li>
+  <li><strong>Buttons:</strong> Trigger actions</li>
+  <li><strong>Text Fields:</strong> Input data</li>
+  <li><strong>Menus:</strong> Navigate options</li>
+  <li><strong>Sliders:</strong> Adjust values</li>
+  <li><strong>Dialogs:</strong> Prompt user decisions</li>
+</ul>
+
+<h2>3. GUI Design Principles</h2>
+<ul>
+  <li><strong>Visual Hierarchy:</strong> Guide attention using layout and contrast</li>
+  <li><strong>Affordance:</strong> Elements suggest their function (e.g., clickable buttons)</li>
+  <li><strong>Feedback:</strong> Show results of user actions</li>
+  <li><strong>Error Prevention:</strong> Disable invalid actions</li>
+</ul>
+
+<h2>4. Example: Login Form GUI</h2>
+<pre>
+Components:
+  - Username field
+  - Password field
+  - "Login" button
+  - "Forgot Password?" link
+  - Error message label
+
+Behavior:
+  - Validate input on submit
+  - Show error if fields are empty
+  - Redirect on success
+</pre>
+
+<h2>5. GUI Development Frameworks</h2>
+<ul>
+  <li><strong>Web:</strong> HTML, CSS, JavaScript, React, Vue</li>
+  <li><strong>Desktop:</strong> Tkinter (Python), JavaFX, Qt (C++)</li>
+  <li><strong>Mobile:</strong> Flutter, SwiftUI, Jetpack Compose</li>
+</ul>
+
+<h2>6. GUI Development Example (Python Tkinter)</h2>
+<pre>
+import tkinter as tk
+
+def login():
+    print("Login clicked")
+
+root = tk.Tk()
+tk.Label(root, text="Username").pack()
+tk.Entry(root).pack()
+tk.Label(root, text="Password").pack()
+tk.Entry(root, show="*").pack()
+tk.Button(root, text="Login", command=login).pack()
+root.mainloop()
+</pre>
+
+<h2>7. Responsive Design</h2>
+<ul>
+  <li><strong>Fluid Layouts:</strong> Adjust to screen size</li>
+  <li><strong>Media Queries:</strong> CSS rules for different devices</li>
+  <li><strong>Touch-Friendly:</strong> Larger buttons and spacing</li>
+</ul>
+
+<h2>8. Accessibility in GUI</h2>
+<ul>
+  <li><strong>Keyboard Navigation:</strong> Tab order and shortcuts</li>
+  <li><strong>Screen Reader Support:</strong> Use semantic elements and ARIA roles</li>
+  <li><strong>Color Contrast:</strong> Ensure readability</li>
+</ul>
+
+<h2>9. GUI Testing</h2>
+<ul>
+  <li><strong>Manual Testing:</strong> Verify layout and behavior</li>
+  <li><strong>Automated Testing:</strong> Use tools like Selenium, Appium</li>
+  <li><strong>Usability Testing:</strong> Observe real users interacting</li>
+</ul>
+
+<h2>10. Best Practices</h2>
+<ul>
+  <li><strong>Keep It Simple:</strong> Avoid clutter</li>
+  <li><strong>Use Standard Controls:</strong> Familiar elements improve usability</li>
+  <li><strong>Provide Feedback:</strong> Confirm actions and errors</li>
+  <li><strong>Test Across Devices:</strong> Ensure compatibility</li>
+</ul>
+
+</body>
+</html>
