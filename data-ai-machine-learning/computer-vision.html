@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Computer Vision - Data, AI & Machine Learning</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Computer Vision</h1>
+<p>Computer Vision is a field of AI that enables machines to interpret and understand visual information from the world, such as images and videos. It powers applications like facial recognition, object detection, and autonomous navigation.</p>
+
+<h2>1. Core Tasks in Computer Vision</h2>
+<ul>
+  <li><strong>Image Classification</strong>
+    <ul>
+      <li>Assign labels to entire images</li>
+      <li>Example: "This is a cat"</li>
+    </ul>
+  </li>
+  <li><strong>Object Detection</strong>
+    <ul>
+      <li>Locate and label multiple objects within an image</li>
+      <li>Example: "Dog" at (x1, y1, x2, y2)</li>
+    </ul>
+  </li>
+  <li><strong>Semantic Segmentation</strong>
+    <ul>
+      <li>Classify each pixel in an image</li>
+      <li>Example: Road vs. Pedestrian vs. Vehicle</li>
+    </ul>
+  </li>
+  <li><strong>Image Captioning</strong>
+    <ul>
+      <li>Generate descriptive text from image content</li>
+      <li>Example: "A man riding a bicycle on a street"</li>
+    </ul>
+  </li>
+  <li><strong>Facial Recognition</strong>
+    <ul>
+      <li>Identify or verify individuals from facial features</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>2. Workflow of a Vision System</h2>
+<ol>
+  <li><strong>Image Acquisition:</strong> Capture via camera or dataset</li>
+  <li><strong>Preprocessing:</strong> Resize, normalize, enhance contrast</li>
+  <li><strong>Feature Extraction:</strong> Identify edges, textures, shapes</li>
+  <li><strong>Model Inference:</strong> Use trained model to classify or detect</li>
+  <li><strong>Postprocessing:</strong> Draw bounding boxes, generate captions</li>
+</ol>
+
+<h2>3. Common Techniques</h2>
+<ul>
+  <li><strong>Convolutional Neural Networks (CNNs):</strong> Core architecture for image tasks</li>
+  <li><strong>Pooling:</strong> Downsample feature maps</li>
+  <li><strong>Transfer Learning:</strong> Use pretrained models like ResNet, VGG</li>
+  <li><strong>Data Augmentation:</strong> Improve generalization via rotation, flipping, cropping</li>
+</ul>
+
+<h2>4. Example: Object Detection</h2>
+<pre>
+Input: Street image
+Detected:
+  - Car at (120, 80, 300, 200)
+  - Pedestrian at (400, 100, 450, 250)
+Model: YOLO or SSD
+</pre>
+
+<h2>5. Example: Image Classification</h2>
+<pre>
+Input: Image of a flower
+Output: "Sunflower"
+Model: CNN with softmax output
+</pre>
+
+<h2>6. Popular Libraries</h2>
+<ul>
+  <li><strong>OpenCV:</strong> Image processing and computer vision toolkit</li>
+  <li><strong>TensorFlow & PyTorch:</strong> Deep learning frameworks for vision models</li>
+  <li><strong>Detectron2:</strong> Facebook’s object detection library</li>
+  <li><strong>MediaPipe:</strong> Real-time face, hand, and pose tracking</li>
+</ul>
+
+<h2>7. Challenges</h2>
+<ul>
+  <li><strong>Lighting Variations:</strong> Affects image quality</li>
+  <li><strong>Occlusion:</strong> Objects partially hidden</li>
+  <li><strong>Scale & Rotation:</strong> Objects appear differently</li>
+  <li><strong>Real-Time Processing:</strong> Requires fast inference</li>
+</ul>
+
+<h2>8. Applications</h2>
+<ul>
+  <li><strong>Healthcare:</strong> Medical image analysis</li>
+  <li><strong>Security:</strong> Surveillance and facial recognition</li>
+  <li><strong>Retail:</strong> Automated checkout and inventory tracking</li>
+  <li><strong>Autonomous Vehicles:</strong> Lane detection, obstacle avoidance</li>
+</ul>
+
+</body>
+</html>
