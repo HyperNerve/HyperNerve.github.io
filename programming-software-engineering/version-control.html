@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Version Control Systems - Programming & Software Engineering</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Version Control Systems (VCS)</h1>
+<p>Version Control Systems track changes to files over time, enabling collaboration, rollback, and branching in software development. They are essential for managing codebases and coordinating team efforts.</p>
+
+<h2>1. Goals of VCS</h2>
+<ul>
+  <li><strong>Track Changes:</strong> Record history of modifications</li>
+  <li><strong>Collaboration:</strong> Multiple developers work on shared code</li>
+  <li><strong>Branching:</strong> Isolate features or fixes</li>
+  <li><strong>Rollback:</strong> Revert to previous versions</li>
+</ul>
+
+<h2>2. Types of VCS</h2>
+<ul>
+  <li><strong>Local VCS:</strong> Tracks changes on a single machine</li>
+  <li><strong>Centralized VCS:</strong> Single server stores all versions (e.g., SVN)</li>
+  <li><strong>Distributed VCS:</strong> Each user has a full copy of the repository (e.g., Git)</li>
+</ul>
+
+<h2>3. Git Basics</h2>
+<ul>
+  <li><strong>Repository:</strong> Project directory tracked by Git</li>
+  <li><strong>Commit:</strong> Snapshot of changes with a message</li>
+  <li><strong>Branch:</strong> Independent line of development</li>
+  <li><strong>Merge:</strong> Combine changes from different branches</li>
+</ul>
+
+<h2>4. Common Git Commands</h2>
+<pre>
+git init           # Initialize repository
+git clone URL      # Copy remote repository
+git add file       # Stage changes
+git commit -m "msg" # Save changes
+git push           # Upload to remote
+git pull           # Download and merge changes
+git checkout branch # Switch branches
+git merge branch   # Merge branch into current
+</pre>
+
+<h2>5. Branching Strategy Example</h2>
+<pre>
+Main Branch: production-ready code
+Feature Branch: new feature development
+Hotfix Branch: urgent bug fixes
+</pre>
+
+<h2>6. GitHub Workflow</h2>
+<ul>
+  <li><strong>Fork:</strong> Copy repository to your account</li>
+  <li><strong>Clone:</strong> Download to local machine</li>
+  <li><strong>Commit & Push:</strong> Save and upload changes</li>
+  <li><strong>Pull Request:</strong> Request to merge changes into original repo</li>
+</ul>
+
+<h2>7. Benefits of VCS</h2>
+<ul>
+  <li><strong>History:</strong> View and revert changes</li>
+  <li><strong>Collaboration:</strong> Multiple contributors with conflict resolution</li>
+  <li><strong>Experimentation:</strong> Try new ideas safely with branches</li>
+</ul>
+
+<h2>8. Conflict Resolution</h2>
+<ul>
+  <li><strong>Merge Conflict:</strong> Occurs when changes overlap</li>
+  <li><strong>Manual Resolution:</strong> Edit conflicting files and commit</li>
+</ul>
+
+<h2>9. Tools and Platforms</h2>
+<ul>
+  <li><strong>Git:</strong> Most popular distributed VCS</li>
+  <li><strong>GitHub:</strong> Cloud hosting for Git repositories</li>
+  <li><strong>GitLab:</strong> DevOps platform with Git support</li>
+  <li><strong>Bitbucket:</strong> Git and Mercurial hosting</li>
+</ul>
+
+<h2>10. Best Practices</h2>
+<ul>
+  <li><strong>Commit Often:</strong> Save work incrementally</li>
+  <li><strong>Write Clear Messages:</strong> Describe changes meaningfully</li>
+  <li><strong>Use Branches:</strong> Isolate features and fixes</li>
+  <li><strong>Review Before Merge:</strong> Use pull requests and code reviews</li>
+</ul>
+
+</body>
+</html>
