@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assembly Language - Computer Systems & Architecture</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
+<h1>Assembly Language</h1>
+<p>Assembly Language is a low-level programming language that provides direct control over hardware. It uses symbolic mnemonics to represent machine instructions and is specific to a processor’s instruction set architecture (ISA).</p>
+
+<h2>1. Characteristics</h2>
+
+<ul>
+  <li><strong>Low-Level:</strong> Close to machine code</li>
+  <li><strong>Hardware-Specific:</strong> Tied to a particular CPU architecture</li>
+  <li><strong>Mnemonic-Based:</strong> Uses symbolic names like MOV, ADD, JMP</li>
+  <li><strong>Efficient:</strong> Allows fine-grained control over performance</li>
+</ul>
+
+<h2>2. Structure of an Assembly Program</h2>
+
+<ul>
+  <li><strong>Labels:</strong> Named locations in code</li>
+  <li><strong>Instructions:</strong> Mnemonics representing operations</li>
+  <li><strong>Operands:</strong> Registers, memory addresses, constants</li>
+  <li><strong>Directives:</strong> Instructions to the assembler (e.g., .data, .text)</li>
+</ul>
+
+<h2>3. Common Instructions</h2>
+
+<ul>
+  <li><strong>Data Movement:</strong> MOV, LOAD, STORE</li>
+  <li><strong>Arithmetic:</strong> ADD, SUB, MUL, DIV</li>
+  <li><strong>Logic:</strong> AND, OR, XOR, NOT</li>
+  <li><strong>Control Flow:</strong> JMP, CALL, RET, LOOP</li>
+  <li><strong>Comparison:</strong> CMP, TEST</li>
+</ul>
+
+<h2>4. Registers</h2>
+
+<ul>
+  <li><strong>General Purpose:</strong> AX, BX, CX, DX (x86); R0–R15 (ARM)</li>
+  <li><strong>Special Purpose:</strong> PC (Program Counter), SP (Stack Pointer), FLAGS</li>
+  <li><strong>Segment Registers:</strong> CS, DS, SS, ES (x86)</li>
+</ul>
+
+<h2>5. Addressing Modes</h2>
+
+<ul>
+  <li><strong>Immediate:</strong> Operand is a constant</li>
+  <li><strong>Register:</strong> Operand is in a register</li>
+  <li><strong>Direct:</strong> Operand is at a memory address</li>
+  <li><strong>Indirect:</strong> Address is stored in a register</li>
+  <li><strong>Indexed:</strong> Base + offset addressing</li>
+</ul>
+
+<h2>6. Stack Operations</h2>
+
+<ul>
+  <li><strong>PUSH:</strong> Place value on stack</li>
+  <li><strong>POP:</strong> Retrieve value from stack</li>
+  <li><strong>CALL:</strong> Push return address and jump to subroutine</li>
+  <li><strong>RET:</strong> Pop return address and resume execution</li>
+</ul>
+
+<h2>7. Assembly vs Machine Code</h2>
+
+<ul>
+  <li><strong>Assembly:</strong> Human-readable mnemonics</li>
+  <li><strong>Machine Code:</strong> Binary instructions executed by CPU</li>
+  <li><strong>Assembler:</strong> Converts assembly to machine code</li>
+</ul>
+
+<h2>8. Sample Program (x86)</h2>
+
+<pre>
+section .data
+  msg db 'Hello', 0
+
+section .text
+  global _start
+
+_start:
+  mov eax, 4        ; syscall: write
+  mov ebx, 1        ; file descriptor: stdout
+  mov ecx, msg      ; message address
+  mov edx, 5        ; message length
+  int 0x80          ; interrupt to invoke syscall
+
+  mov eax, 1        ; syscall: exit
+  xor ebx, ebx      ; exit code 0
+  int 0x80
+</pre>
+
+<h2>9. Tools and Assemblers</h2>
+
+<ul>
+  <li><strong>NASM:</strong> Netwide Assembler for x86</li>
+  <li><strong>MASM:</strong> Microsoft Assembler</li>
+  <li><strong>GAS:</strong> GNU Assembler (AT&T syntax)</li>
+  <li><strong>ARM Assembler:</strong> For ARM-based systems</li>
+</ul>
+
+<h2>10. Applications</h2>
+
+<ul>
+  <li><strong>Embedded Systems:</strong> Precise control over hardware</li>
+  <li><strong>Operating Systems:</strong> Bootloaders, interrupt handlers</li>
+  <li><strong>Reverse Engineering:</strong> Analyzing compiled binaries</li>
+  <li><strong>Performance Optimization:</strong> Critical routines in low-level code</li>
+</ul>
+
+</body>
+  </html>
