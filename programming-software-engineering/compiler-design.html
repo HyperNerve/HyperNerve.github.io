@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Compiler Design - Programming & Software Engineering</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Compiler Design</h1>
+<p>Compiler design involves creating software that translates source code written in a high-level programming language into machine code. It includes multiple stages that analyze, optimize, and generate executable output.</p>
+
+<h2>1. What is a Compiler?</h2>
+<ul>
+  <li><strong>Definition:</strong> A program that converts source code to target code</li>
+  <li><strong>Input:</strong> High-level language (e.g., C, Java)</li>
+  <li><strong>Output:</strong> Assembly or machine code</li>
+</ul>
+
+<h2>2. Phases of Compilation</h2>
+<ol>
+  <li><strong>Lexical Analysis:</strong> Tokenizes source code</li>
+  <li><strong>Syntax Analysis:</strong> Builds parse tree using grammar rules</li>
+  <li><strong>Semantic Analysis:</strong> Checks for logical consistency</li>
+  <li><strong>Intermediate Code Generation:</strong> Produces platform-independent code</li>
+  <li><strong>Code Optimization:</strong> Improves performance and efficiency</li>
+  <li><strong>Code Generation:</strong> Converts intermediate code to machine code</li>
+  <li><strong>Code Linking and Assembly:</strong> Produces final executable</li>
+</ol>
+
+<h2>3. Lexical Analysis Example</h2>
+<p>Input: <code>int x = 5;</code></p>
+<p>Tokens:</p>
+<pre>
+[KEYWORD: int], [IDENTIFIER: x], [OPERATOR: =], [NUMBER: 5], [DELIMITER: ;]
+</pre>
+
+<h2>4. Syntax Analysis Example</h2>
+<p>Grammar Rule:</p>
+<pre>
+assignment → identifier '=' expression ';'
+</pre>
+<p>Parse Tree:</p>
+<pre>
+assignment
+ ├── identifier: x
+ ├── '='
+ ├── expression: 5
+ └── ';'
+</pre>
+
+<h2>5. Intermediate Code Example</h2>
+<p>Three-address code for <code>a = b + c * d</code>:</p>
+<pre>
+t1 = c * d
+t2 = b + t1
+a = t2
+</pre>
+
+<h2>6. Optimization Techniques</h2>
+<ul>
+  <li><strong>Constant Folding:</strong> Evaluate constant expressions at compile time</li>
+  <li><strong>Dead Code Elimination:</strong> Remove unreachable or unused code</li>
+  <li><strong>Loop Unrolling:</strong> Reduce loop overhead</li>
+  <li><strong>Inlining:</strong> Replace function calls with function body</li>
+</ul>
+
+<h2>7. Code Generation</h2>
+<ul>
+  <li><strong>Target Architecture:</strong> x86, ARM, RISC-V</li>
+  <li><strong>Instruction Selection:</strong> Choose optimal machine instructions</li>
+  <li><strong>Register Allocation:</strong> Efficient use of CPU registers</li>
+</ul>
+
+<h2>8. Compiler Types</h2>
+<ul>
+  <li><strong>Single-Pass:</strong> Fast but limited optimization</li>
+  <li><strong>Multi-Pass:</strong> Allows deeper analysis and optimization</li>
+  <li><strong>Just-In-Time (JIT):</strong> Compiles during execution (e.g., JVM)</li>
+</ul>
+
+<h2>9. Tools and Technologies</h2>
+<ul>
+  <li><strong>Lex:</strong> Lexical analyzer generator</li>
+  <li><strong>Yacc/Bison:</strong> Parser generator</li>
+  <li><strong>LLVM:</strong> Modular compiler infrastructure</li>
+  <li><strong>GCC:</strong> GNU Compiler Collection</li>
+</ul>
+
+<h2>10. Applications of Compiler Design</h2>
+<ul>
+  <li><strong>Language Development:</strong> Build new programming languages</li>
+  <li><strong>Performance Optimization:</strong> Improve runtime efficiency</li>
+  <li><strong>Cross-Platform Development:</strong> Compile for multiple architectures</li>
+  <li><strong>Security Analysis:</strong> Detect vulnerabilities in source code</li>
+</ul>
+
+</body>
+</html>
