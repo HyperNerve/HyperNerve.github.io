@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Logic Programming - Programming & Software Engineering</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Logic Programming</h1>
+<p>Logic programming is a declarative paradigm where programs are expressed in terms of facts and rules. Computation is performed by querying these facts using logical inference.</p>
+
+<h2>1. Core Concepts</h2>
+<ul>
+  <li><strong>Facts:</strong> Basic assertions about objects or relationships</li>
+  <li><strong>Rules:</strong> Logical implications that define relationships</li>
+  <li><strong>Queries:</strong> Questions posed to the system to infer answers</li>
+  <li><strong>Inference Engine:</strong> Resolves queries using facts and rules</li>
+</ul>
+
+<h2>2. Example: Family Relationships in Prolog</h2>
+
+<h3>Facts</h3>
+<pre>
+parent(john, mary).
+parent(mary, susan).
+female(mary).
+female(susan).
+</pre>
+
+<h3>Rules</h3>
+<pre>
+mother(X, Y) :- parent(X, Y), female(X).
+grandparent(X, Y) :- parent(X, Z), parent(Z, Y).
+</pre>
+
+<h3>Query</h3>
+<pre>
+?- mother(mary, susan).
+true.
+
+?- grandparent(john, susan).
+true.
+</pre>
+
+<h2>3. Language Features</h2>
+<ul>
+  <li><strong>Unification:</strong> Matching variables and values during inference</li>
+  <li><strong>Backtracking:</strong> System explores multiple paths to find solutions</li>
+  <li><strong>Recursion:</strong> Rules can call themselves to express complex logic</li>
+</ul>
+
+<h2>4. Popular Logic Programming Languages</h2>
+<ul>
+  <li><strong>Prolog:</strong> Most widely used logic programming language</li>
+  <li><strong>Datalog:</strong> Subset of Prolog used in databases</li>
+  <li><strong>Mercury:</strong> Strongly typed logic-functional hybrid</li>
+</ul>
+
+<h2>5. Applications</h2>
+<ul>
+  <li><strong>Expert Systems:</strong> Encode domain knowledge as rules</li>
+  <li><strong>Natural Language Processing:</strong> Grammar and parsing</li>
+  <li><strong>Knowledge Representation:</strong> Ontologies and semantic reasoning</li>
+  <li><strong>AI Planning:</strong> Goal-driven action sequences</li>
+</ul>
+
+<h2>6. Advanced Example: Path Finding</h2>
+
+<h3>Facts</h3>
+<pre>
+connected(a, b).
+connected(b, c).
+connected(c, d).
+</pre>
+
+<h3>Rules</h3>
+<pre>
+path(X, Y) :- connected(X, Y).
+path(X, Y) :- connected(X, Z), path(Z, Y).
+</pre>
+
+<h3>Query</h3>
+<pre>
+?- path(a, d).
+true.
+</pre>
+
+<h2>7. Declarative Nature</h2>
+<p>Unlike imperative programming, logic programming focuses on <em>what</em> to solve, not <em>how</em> to solve it. The inference engine handles execution.</p>
+
+<h2>8. Limitations</h2>
+<ul>
+  <li><strong>Performance:</strong> Slower than imperative approaches for some tasks</li>
+  <li><strong>Debugging:</strong> Can be difficult due to implicit control flow</li>
+  <li><strong>Scalability:</strong> Complex logic may require optimization</li>
+</ul>
+
+<h2>9. Integration with Other Paradigms</h2>
+<ul>
+  <li><strong>Constraint Logic Programming:</strong> Combines logic with constraint solving</li>
+  <li><strong>Answer Set Programming:</strong> Declarative problem solving with stable models</li>
+</ul>
+
+<h2>10. Tools and Environments</h2>
+<ul>
+  <li><strong>SWI-Prolog:</strong> Open-source Prolog implementation</li>
+  <li><strong>GNU Prolog:</strong> Native compiler for Prolog</li>
+  <li><strong>TuProlog:</strong> Lightweight Prolog for Java integration</li>
+</ul>
+
+</body>
+</html>
