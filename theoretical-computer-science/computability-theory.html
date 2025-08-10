@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Computability Theory - Theoretical Computer Science</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
+<h1>Computability Theory</h1>
+<p>Computability Theory is the branch of theoretical computer science that studies which problems can be solved by algorithms and which cannot. It defines the limits of computation and formalizes the concept of "effective procedures."</p>
+
+<h2>1. Models of Computation</h2>
+
+<h3>Turing Machine</h3>
+<p>A Turing Machine is a theoretical model that consists of an infinite tape, a read/write head, and a finite set of states. It can simulate any algorithm and is used to define what is computable.</p>
+<p><strong>Components:</strong> Tape, Head, States, Transition Function, Start State, Accept/Reject States</p>
+<p><strong>Example:</strong> A Turing machine that accepts binary strings with an even number of 1s.</p>
+
+<h3>Lambda Calculus</h3>
+<p>A formal system based on function abstraction and application. It is equivalent in power to Turing machines.</p>
+<p><strong>Example:</strong> λx.x is the identity function.</p>
+
+<h3>Recursive Functions</h3>
+<p>Functions defined using basic operations and recursion. They form another model of computation equivalent to Turing machines.</p>
+
+<h2>2. Decision Problems</h2>
+
+<h3>Definition</h3>
+<p>A decision problem is a problem with a yes/no answer for each input.</p>
+<p><strong>Example:</strong> "Is a given number prime?"</p>
+
+<h3>Decidable Problems</h3>
+<p>Problems for which an algorithm exists that always gives a correct yes/no answer in finite time.</p>
+<p><strong>Example:</strong> Checking if a string belongs to a regular language using a DFA.</p>
+
+<h3>Undecidable Problems</h3>
+<p>Problems for which no algorithm can decide the answer for all inputs.</p>
+<p><strong>Example:</strong> The Halting Problem: determining whether a program halts on a given input.</p>
+
+<h2>3. The Halting Problem</h2>
+
+<h3>Definition</h3>
+<p>The Halting Problem asks whether a given program will halt or run forever on a specific input.</p>
+
+<h3>Proof of Undecidability</h3>
+<p>Alan Turing proved that no general algorithm can solve the Halting Problem for all possible program-input pairs. The proof uses diagonalization and self-reference.</p>
+
+<h3>Implications</h3>
+<p>There are limits to what computers can do. Some problems are fundamentally unsolvable by any algorithm.</p>
+
+<h2>4. Language Classes</h2>
+
+<h3>Recursive Languages</h3>
+<p>Languages for which a Turing machine always halts and correctly decides membership.</p>
+<p><strong>Example:</strong> The set of strings accepted by a DFA.</p>
+
+<h3>Recursively Enumerable (RE) Languages</h3>
+<p>Languages for which a Turing machine halts and accepts if the string is in the language, but may loop forever if it is not.</p>
+<p><strong>Example:</strong> The set of valid programs that halt.</p>
+
+<h3>Co-RE Languages</h3>
+<p>Languages whose complements are recursively enumerable.</p>
+
+<h2>5. Reductions</h2>
+
+<h3>Definition</h3>
+<p>A reduction transforms one problem into another. If problem A can be reduced to problem B, and B is solvable, then A is solvable.</p>
+
+<h3>Types of Reductions</h3>
+<ul>
+  <li><strong>Many-One Reduction:</strong> A single transformation from one instance to another.</li>
+  <li><strong>Turing Reduction:</strong> Uses an oracle for the second problem during computation.</li>
+</ul>
+
+<h3>Use in Proving Undecidability</h3>
+<p>To prove a problem is undecidable, reduce a known undecidable problem to it.</p>
+
+<h2>6. Rice’s Theorem</h2>
+
+<h3>Statement</h3>
+<p>Any non-trivial property of the language recognized by a Turing machine is undecidable.</p>
+
+<h3>Explanation</h3>
+<p>If you want to know whether a Turing machine accepts all strings, or only even-length strings, or any other non-trivial property, it is undecidable.</p>
+
+<h2>7. Post Correspondence Problem (PCP)</h2>
+
+<h3>Definition</h3>
+<p>Given two lists of strings, determine whether there exists a sequence of indices such that the concatenation of strings from both lists is equal.</p>
+
+<h3>Undecidability</h3>
+<p>PCP is undecidable and often used in reductions to prove other problems are undecidable.</p>
+
+<h2>8. Computability vs Complexity</h2>
+
+<h3>Computability</h3>
+<p>Focuses on whether a problem can be solved at all.</p>
+
+<h3>Complexity</h3>
+<p>Focuses on how efficiently a problem can be solved (e.g., time and space).</p>
+
+<h2>9. Real-World Implications</h2>
+
+<ul>
+  <li><strong>Software Verification:</strong> Some bugs cannot be detected automatically due to undecidability.</li>
+  <li><strong>Security:</strong> Malware detection is limited by the Halting Problem.</li>
+  <li><strong>AI:</strong> Limits on what machines can reason about or prove.</li>
+</ul>
+
+</body>
+  </html>
