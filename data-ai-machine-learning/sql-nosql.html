@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SQL vs NoSQL - Data, AI & Machine Learning</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>SQL vs NoSQL Databases</h1>
+<p>SQL and NoSQL represent two distinct paradigms for managing data. SQL databases use structured schemas and relational models, while NoSQL databases offer flexible, scalable approaches for unstructured or semi-structured data.</p>
+
+<h2>1. Key Differences</h2>
+<table border="1">
+  <tr>
+    <th>Aspect</th>
+    <th>SQL</th>
+    <th>NoSQL</th>
+  </tr>
+  <tr>
+    <td>Data Model</td>
+    <td>Relational (tables)</td>
+    <td>Document, key-value, graph, column</td>
+  </tr>
+  <tr>
+    <td>Schema</td>
+    <td>Fixed schema</td>
+    <td>Dynamic schema</td>
+  </tr>
+  <tr>
+    <td>Scalability</td>
+    <td>Vertical scaling</td>
+    <td>Horizontal scaling</td>
+  </tr>
+  <tr>
+    <td>Query Language</td>
+    <td>SQL</td>
+    <td>Varies (e.g., JSON-based, proprietary)</td>
+  </tr>
+  <tr>
+    <td>Transactions</td>
+    <td>ACID compliant</td>
+    <td>BASE model (eventual consistency)</td>
+  </tr>
+</table>
+
+<h2>2. SQL Example (Relational)</h2>
+<pre>
+CREATE TABLE Products (
+  ID INT PRIMARY KEY,
+  Name VARCHAR(100),
+  Price DECIMAL(10,2)
+);
+
+SELECT * FROM Products WHERE Price > 100;
+</pre>
+
+<h2>3. NoSQL Example (Document - MongoDB)</h2>
+<pre>
+{
+  "_id": 1,
+  "name": "Laptop",
+  "price": 1200,
+  "specs": {
+    "cpu": "Intel i7",
+    "ram": "16GB"
+  }
+}
+</pre>
+
+<h2>4. Use Cases</h2>
+<ul>
+  <li><strong>SQL:</strong> Banking, ERP, legacy systems, analytics</li>
+  <li><strong>NoSQL:</strong> Real-time apps, IoT, social media, big data</li>
+</ul>
+
+<h2>5. Popular SQL Databases</h2>
+<ul>
+  <li>MySQL</li>
+  <li>PostgreSQL</li>
+  <li>Oracle Database</li>
+  <li>Microsoft SQL Server</li>
+</ul>
+
+<h2>6. Popular NoSQL Databases</h2>
+<ul>
+  <li>MongoDB (Document)</li>
+  <li>Redis (Key-Value)</li>
+  <li>Cassandra (Column)</li>
+  <li>Neo4j (Graph)</li>
+</ul>
+
+<h2>7. CAP Theorem</h2>
+<p>NoSQL systems often balance the CAP theorem:</p>
+<ul>
+  <li><strong>Consistency:</strong> All nodes see the same data</li>
+  <li><strong>Availability:</strong> Every request gets a response</li>
+  <li><strong>Partition Tolerance:</strong> System continues despite network splits</li>
+</ul>
+
+<h2>8. When to Choose What?</h2>
+<ul>
+  <li><strong>Choose SQL:</strong> When data integrity and complex queries matter</li>
+  <li><strong>Choose NoSQL:</strong> When scalability and flexibility are key</li>
+</ul>
+
+</body>
+  </html>
