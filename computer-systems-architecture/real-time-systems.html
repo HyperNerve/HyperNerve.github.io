@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Real-Time Systems - Computer Systems & Architecture</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Real-Time Systems</h1>
+<p>Real-time systems are computing systems that must respond to inputs or events within strict time constraints. They are used in domains where timing correctness is as critical as functional correctness.</p>
+
+<h2>1. Characteristics of Real-Time Systems</h2>
+<ul>
+  <li><strong>Determinism:</strong> Predictable behavior under defined conditions</li>
+  <li><strong>Time Constraints:</strong> Must meet deadlines for task completion</li>
+  <li><strong>Reliability:</strong> Often used in safety-critical applications</li>
+  <li><strong>Concurrency:</strong> Multiple tasks executing simultaneously</li>
+  <li><strong>Minimal Latency:</strong> Fast response to external events</li>
+</ul>
+
+<h2>2. Types of Real-Time Systems</h2>
+<ul>
+  <li><strong>Hard Real-Time:</strong> Missing a deadline leads to catastrophic failure (e.g., pacemakers, flight control)</li>
+  <li><strong>Soft Real-Time:</strong> Occasional deadline misses are tolerable (e.g., video streaming)</li>
+  <li><strong>Firm Real-Time:</strong> Deadline misses degrade quality but do not cause failure</li>
+</ul>
+
+<h2>3. Real-Time Operating Systems (RTOS)</h2>
+<ul>
+  <li><strong>Task Scheduling:</strong> Priority-based, preemptive scheduling</li>
+  <li><strong>Interrupt Handling:</strong> Fast and deterministic response to hardware events</li>
+  <li><strong>Inter-task Communication:</strong> Semaphores, message queues, mailboxes</li>
+  <li><strong>Examples:</strong> FreeRTOS, VxWorks, QNX, RTEMS</li>
+</ul>
+
+<h2>4. Scheduling Algorithms</h2>
+<ul>
+  <li><strong>Rate Monotonic Scheduling (RMS):</strong> Fixed priority based on task frequency</li>
+  <li><strong>Earliest Deadline First (EDF):</strong> Dynamic priority based on deadline proximity</li>
+  <li><strong>Least Laxity First (LLF):</strong> Priority based on remaining time before deadline</li>
+</ul>
+
+<h2>5. Task Types</h2>
+<ul>
+  <li><strong>Periodic Tasks:</strong> Execute at regular intervals</li>
+  <li><strong>Aperiodic Tasks:</strong> Triggered by external events</li>
+  <li><strong>Sporadic Tasks:</strong> Occur irregularly but with minimum separation time</li>
+</ul>
+
+<h2>6. Timing Analysis</h2>
+<ul>
+  <li><strong>Worst-Case Execution Time (WCET):</strong> Maximum time a task may take</li>
+  <li><strong>Response Time Analysis:</strong> Time from event occurrence to task completion</li>
+  <li><strong>Jitter:</strong> Variation in task start time</li>
+</ul>
+
+<h2>7. Resource Management</h2>
+<ul>
+  <li><strong>Priority Inversion:</strong> Lower-priority task holds resource needed by higher-priority task</li>
+  <li><strong>Priority Inheritance:</strong> Temporarily elevates priority to avoid inversion</li>
+  <li><strong>Deadlock Avoidance:</strong> Careful resource allocation and ordering</li>
+</ul>
+
+<h2>8. Real-Time Communication</h2>
+<ul>
+  <li><strong>CAN Bus:</strong> Used in automotive and industrial systems</li>
+  <li><strong>Time-Triggered Protocols:</strong> Ensure deterministic message delivery</li>
+  <li><strong>Real-Time Ethernet:</strong> Extensions for time-sensitive networking</li>
+</ul>
+
+<h2>9. Applications of Real-Time Systems</h2>
+<ul>
+  <li><strong>Automotive:</strong> Engine control, ABS, airbag deployment</li>
+  <li><strong>Aerospace:</strong> Flight control, navigation systems</li>
+  <li><strong>Industrial Automation:</strong> Robotics, process control</li>
+  <li><strong>Medical Devices:</strong> Infusion pumps, diagnostic equipment</li>
+  <li><strong>Telecommunications:</strong> Base station control, packet scheduling</li>
+</ul>
+
+<h2>10. Design Considerations</h2>
+<ul>
+  <li><strong>Timing Guarantees:</strong> Ensure deadlines are always met</li>
+  <li><strong>Fault Tolerance:</strong> Handle hardware/software failures gracefully</li>
+  <li><strong>Certification:</strong> Compliance with safety standards (e.g., DO-178C, ISO 26262)</li>
+</ul>
+
+</body>
+</html>
