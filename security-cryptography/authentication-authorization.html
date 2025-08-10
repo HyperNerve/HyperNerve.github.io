@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Authentication and Authorization - Security & Cryptography</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Authentication and Authorization</h1>
+<p>Authentication and Authorization are foundational concepts in security. Authentication verifies user identity, while authorization determines what resources a user is allowed to access after being authenticated.</p>
+
+<h2>1. Objectives</h2>
+<ul>
+  <li>Ensure only legitimate users can access systems</li>
+  <li>Control access to sensitive resources</li>
+  <li>Prevent privilege escalation and misuse</li>
+</ul>
+
+<h2>2. Authentication Methods</h2>
+<ul>
+  <li><strong>Passwords:</strong> Traditional credential-based login</li>
+  <li><strong>Biometrics:</strong> Fingerprint, face, voice recognition</li>
+  <li><strong>Tokens:</strong> One-time passwords (OTP), hardware keys</li>
+  <li><strong>Multi-Factor Authentication (MFA):</strong> Combination of methods</li>
+</ul>
+
+<h2>3. Authorization Models</h2>
+<ul>
+  <li><strong>Role-Based Access Control (RBAC):</strong> Permissions based on user roles</li>
+  <li><strong>Attribute-Based Access Control (ABAC):</strong> Rules based on user attributes</li>
+  <li><strong>Discretionary Access Control (DAC):</strong> Resource owners define access</li>
+  <li><strong>Mandatory Access Control (MAC):</strong> System-enforced policies</li>
+</ul>
+
+<h2>4. Example: Web Application Login</h2>
+<p>User enters username and password</p>
+<p>System verifies credentials using hash comparison</p>
+<p>If valid, user is authenticated and assigned role</p>
+<p>Role determines access to dashboard, settings, or admin panel</p>
+
+<h2>5. Session Management</h2>
+<ul>
+  <li>Use secure session tokens</li>
+  <li>Set expiration and renewal policies</li>
+  <li>Store tokens securely (e.g., HttpOnly cookies)</li>
+</ul>
+
+<h2>6. Identity Providers & Protocols</h2>
+<ul>
+  <li>OAuth 2.0 (delegated access)</li>
+  <li>OpenID Connect (authentication layer)</li>
+  <li>SAML (enterprise identity federation)</li>
+  <li>LDAP (directory-based authentication)</li>
+</ul>
+
+<h2>7. Best Practices</h2>
+<ul>
+  <li>Enforce strong password policies</li>
+  <li>Use MFA wherever possible</li>
+  <li>Limit token lifetime and scope</li>
+  <li>Log and monitor authentication events</li>
+</ul>
+
+<h2>8. Challenges</h2>
+<ul>
+  <li>Credential theft and phishing attacks</li>
+  <li>Session hijacking and replay attacks</li>
+  <li>Managing access across distributed systems</li>
+</ul>
+
+<h2>9. Applications</h2>
+<ul>
+  <li>Enterprise identity management</li>
+  <li>Cloud access control</li>
+  <li>API security and token-based access</li>
+  <li>Secure login for web and mobile apps</li>
+</ul>
+
+</body>
+  </html>
