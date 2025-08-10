@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Automata Theory - Theoretical Computer Science</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
+<h1>Automata Theory</h1>
+<p>Automata Theory is the study of abstract machines and the computational problems they can solve. It forms the foundation of compiler design, formal languages, and complexity theory.</p>
+
+<h2>1. Finite Automata (FA)</h2>
+
+<h3>Deterministic Finite Automaton (DFA)</h3>
+<p>A machine with a finite number of states, where each input leads to exactly one next state.</p>
+<p><strong>Components:</strong> States, Alphabet, Transition Function, Start State, Accept States</p>
+<p><strong>Example:</strong> DFA that accepts strings ending in '01'</p>
+
+<h3>Nondeterministic Finite Automaton (NFA)</h3>
+<p>Similar to DFA but allows multiple transitions for the same input or ε-transitions (empty string).</p>
+<p><strong>Note:</strong> Every NFA has an equivalent DFA.</p>
+
+<h2>2. Regular Languages</h2>
+
+<h3>Definition</h3>
+<p>Languages that can be expressed using regular expressions and accepted by finite automata.</p>
+
+<h3>Regular Expressions</h3>
+<p>Symbolic notation to describe regular languages.</p>
+<p><strong>Operators:</strong> Union (|), Concatenation, Kleene Star (*)</p>
+<p><strong>Example:</strong> (a|b)*abb matches strings ending in 'abb'</p>
+
+<h3>Closure Properties</h3>
+<ul>
+  <li>Closed under union, intersection, concatenation, and Kleene star</li>
+</ul>
+
+<h2>3. Context-Free Grammars (CFG)</h2>
+
+<h3>Definition</h3>
+<p>A formal grammar where each production rule replaces a single non-terminal with a string of terminals and/or non-terminals.</p>
+
+<h3>Example:</h3>
+<pre>
+S → aSb | ε
+</pre>
+<p>Generates strings with equal number of a's and b's in correct order.</p>
+
+<h3>Parse Trees</h3>
+<p>Tree representation of derivations in a CFG.</p>
+
+<h3>Ambiguity</h3>
+<p>A grammar is ambiguous if a string can have more than one parse tree.</p>
+
+<h2>4. Pushdown Automata (PDA)</h2>
+
+<h3>Definition</h3>
+<p>A finite automaton with a stack. Used to recognize context-free languages.</p>
+
+<h3>Example:</h3>
+<p>Accepts strings with balanced parentheses: (())()</p>
+
+<h2>5. Turing Machines</h2>
+
+<h3>Definition</h3>
+<p>A theoretical machine with infinite tape and a head that can read/write and move left/right. It models general computation.</p>
+
+<h3>Components:</h3>
+<ul>
+  <li>States</li>
+  <li>Alphabet</li>
+  <li>Transition Function</li>
+  <li>Start State</li>
+  <li>Accept and Reject States</li>
+</ul>
+
+<h3>Example:</h3>
+<p>A Turing machine that decides whether a binary string has an even number of 1s.</p>
+
+<h2>6. Language Hierarchy (Chomsky Hierarchy)</h2>
+
+<ul>
+  <li><strong>Type 3:</strong> Regular Languages (Finite Automata)</li>
+  <li><strong>Type 2:</strong> Context-Free Languages (Pushdown Automata)</li>
+  <li><strong>Type 1:</strong> Context-Sensitive Languages (Linear Bounded Automata)</li>
+  <li><strong>Type 0:</strong> Recursively Enumerable Languages (Turing Machines)</li>
+</ul>
+
+<h2>7. Applications in Computer Science</h2>
+
+<ul>
+  <li><strong>Finite Automata:</strong> Lexical analysis in compilers</li>
+  <li><strong>Regular Expressions:</strong> Pattern matching in text editors and search engines</li>
+  <li><strong>CFGs:</strong> Syntax analysis in compilers</li>
+  <li><strong>PDAs:</strong> Parsing nested structures like XML or code blocks</li>
+  <li><strong>Turing Machines:</strong> Foundation of computability and complexity theory</li>
+</ul>
+
+</body>
+</html>
