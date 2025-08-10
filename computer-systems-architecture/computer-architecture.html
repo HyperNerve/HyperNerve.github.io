@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Computer Architecture - Computer Systems & Architecture</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
+<h1>Computer Architecture</h1>
+<p>Computer Architecture defines the structure, behavior, and design principles of a computer system. It encompasses the instruction set, data formats, addressing modes, and hardware organization from a programmer’s perspective.</p>
+
+<h2>1. Levels of Computer Architecture</h2>
+<ul>
+  <li><strong>Instruction Set Architecture (ISA):</strong> Defines machine instructions, registers, and data types</li>
+  <li><strong>Microarchitecture:</strong> Implementation of ISA using logic circuits and control units</li>
+  <li><strong>System Design:</strong> Includes buses, memory hierarchy, and I/O systems</li>
+</ul>
+
+<h2>2. Von Neumann vs Harvard Architecture</h2>
+<ul>
+  <li><strong>Von Neumann:</strong> Shared memory for instructions and data; simpler design</li>
+  <li><strong>Harvard:</strong> Separate memory for instructions and data; faster access</li>
+</ul>
+
+<h2>3. RISC vs CISC</h2>
+<ul>
+  <li><strong>RISC (Reduced Instruction Set Computer):</strong> Simple instructions, faster execution, used in ARM</li>
+  <li><strong>CISC (Complex Instruction Set Computer):</strong> Rich instruction set, fewer instructions per program, used in x86</li>
+</ul>
+
+<h2>4. Instruction Set Design</h2>
+<ul>
+  <li><strong>Data Transfer Instructions:</strong> MOV, LOAD, STORE</li>
+  <li><strong>Arithmetic Instructions:</strong> ADD, SUB, MUL, DIV</li>
+  <li><strong>Logical Instructions:</strong> AND, OR, XOR, NOT</li>
+  <li><strong>Control Instructions:</strong> JMP, CALL, RET, BRANCH</li>
+</ul>
+
+<h2>5. Pipelining</h2>
+<ul>
+  <li><strong>Concept:</strong> Overlapping instruction execution stages</li>
+  <li><strong>Stages:</strong> Fetch → Decode → Execute → Memory → Write-back</li>
+  <li><strong>Hazards:</strong> Data, control, and structural hazards</li>
+</ul>
+
+<h2>6. Parallelism</h2>
+<ul>
+  <li><strong>Instruction-Level Parallelism (ILP):</strong> Multiple instructions per clock cycle</li>
+  <li><strong>Thread-Level Parallelism (TLP):</strong> Multiple threads executed concurrently</li>
+  <li><strong>Data-Level Parallelism (DLP):</strong> SIMD and vector processing</li>
+</ul>
+
+<h2>7. Memory Hierarchy</h2>
+<ul>
+  <li><strong>Registers → Cache → RAM → Disk:</strong> Increasing size, decreasing speed</li>
+  <li><strong>Cache Levels:</strong> L1 (fastest), L2, L3</li>
+  <li><strong>Virtual Memory:</strong> Uses disk to simulate RAM</li>
+</ul>
+
+<h2>8. I/O Architecture</h2>
+<ul>
+  <li><strong>Programmed I/O:</strong> CPU controls data transfer</li>
+  <li><strong>Interrupt-driven I/O:</strong> Devices signal CPU</li>
+  <li><strong>DMA:</strong> Direct device-to-memory transfer</li>
+</ul>
+
+<h2>9. Performance Metrics</h2>
+<ul>
+  <li><strong>Clock Speed:</strong> GHz rating of CPU</li>
+  <li><strong>CPI (Cycles Per Instruction):</strong> Average cycles per instruction</li>
+  <li><strong>MIPS:</strong> Millions of Instructions Per Second</li>
+  <li><strong>FLOPS:</strong> Floating Point Operations Per Second</li>
+</ul>
+
+<h2>10. Modern Trends</h2>
+<ul>
+  <li><strong>Multicore Processors:</strong> Multiple cores for parallel execution</li>
+  <li><strong>GPUs:</strong> Specialized for graphics and parallel computation</li>
+  <li><strong>SoCs:</strong> System-on-Chip integrating CPU, GPU, memory</li>
+  <li><strong>RISC-V:</strong> Open-source ISA gaining adoption</li>
+</ul>
+
+<h2>11. Applications</h2>
+<ul>
+  <li><strong>Compiler Optimization:</strong> Tailored for ISA and pipeline</li>
+  <li><strong>Embedded Systems:</strong> Efficient architecture for constrained environments</li>
+  <li><strong>High-Performance Computing:</strong> Parallelism and memory hierarchy tuning</li>
+</ul>
+
+</body>
+</html>
