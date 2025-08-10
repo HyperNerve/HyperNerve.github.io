@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Process Scheduling - Computer Systems & Architecture</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Process Scheduling</h1>
+<p>Process scheduling is the mechanism by which an operating system decides which process runs at any given time. It ensures fair CPU allocation, maximizes efficiency, and maintains system responsiveness.</p>
+
+<h2>1. Goals of Scheduling</h2>
+<ul>
+  <li>Maximize CPU utilization</li>
+  <li>Minimize waiting and turnaround time</li>
+  <li>Ensure fairness among processes</li>
+  <li>Support multitasking and responsiveness</li>
+</ul>
+
+<h2>2. Scheduling Criteria</h2>
+<ul>
+  <li><strong>CPU Utilization:</strong> Keep CPU busy as much as possible</li>
+  <li><strong>Throughput:</strong> Number of processes completed per unit time</li>
+  <li><strong>Turnaround Time:</strong> Total time from submission to completion</li>
+  <li><strong>Waiting Time:</strong> Time spent in ready queue</li>
+  <li><strong>Response Time:</strong> Time from submission to first response</li>
+</ul>
+
+<h2>3. Types of Schedulers</h2>
+<ul>
+  <li><strong>Long-Term Scheduler:</strong> Controls admission of jobs into system</li>
+  <li><strong>Short-Term Scheduler:</strong> Selects process for CPU execution</li>
+  <li><strong>Medium-Term Scheduler:</strong> Handles swapping of processes</li>
+</ul>
+
+<h2>4. Scheduling Algorithms</h2>
+<ul>
+  <li><strong>First-Come, First-Served (FCFS):</strong> Processes executed in arrival order</li>
+  <li><strong>Shortest Job First (SJF):</strong> Executes shortest process first</li>
+  <li><strong>Round Robin (RR):</strong> Time-sliced execution for fairness</li>
+  <li><strong>Priority Scheduling:</strong> Higher priority processes run first</li>
+  <li><strong>Multilevel Queue:</strong> Separate queues for different process types</li>
+  <li><strong>Multilevel Feedback Queue:</strong> Dynamic adjustment of process priority</li>
+</ul>
+
+<h2>5. Preemptive vs Non-Preemptive</h2>
+<ul>
+  <li><strong>Preemptive:</strong> Allows interruption of running process</li>
+  <li><strong>Non-Preemptive:</strong> Process runs until completion or voluntary yield</li>
+</ul>
+
+<h2>6. Context Switching</h2>
+<ul>
+  <li>Saving and restoring process state during switch</li>
+  <li>Introduces overhead but enables multitasking</li>
+</ul>
+
+<h2>7. Real-Time Scheduling</h2>
+<ul>
+  <li><strong>Hard Real-Time:</strong> Deadlines must be met</li>
+  <li><strong>Soft Real-Time:</strong> Deadlines preferred but not mandatory</li>
+  <li><strong>Algorithms:</strong> Rate Monotonic, Earliest Deadline First</li>
+</ul>
+
+<h2>8. Performance Trade-offs</h2>
+<ul>
+  <li>Balancing throughput vs responsiveness</li>
+  <li>Avoiding starvation and ensuring fairness</li>
+  <li>Minimizing context switch overhead</li>
+</ul>
+
+</body>
+</html>
