@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Logic and Proof Techniques - Theoretical Computer Science</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
+<h1>Logic and Proof Techniques</h1>
+<p>Logic and proof techniques provide the formal tools to reason about algorithms, data structures, and computational systems. They are essential for verifying correctness, proving properties, and understanding the limits of computation.</p>
+
+<h2>1. Propositional Logic</h2>
+
+<ul>
+  <li><strong>Proposition:</strong> A statement that is either true or false.</li>
+  <li><strong>Logical Connectives:</strong> AND (∧), OR (∨), NOT (¬), IMPLIES (→), IFF (↔)</li>
+  <li><strong>Truth Tables:</strong> Used to define the semantics of logical connectives.</li>
+  <li><strong>Tautology:</strong> A formula that is always true.</li>
+  <li><strong>Contradiction:</strong> A formula that is always false.</li>
+</ul>
+
+<h2>2. Predicate Logic (First-Order Logic)</h2>
+
+<ul>
+  <li><strong>Predicate:</strong> A property or relation involving variables.</li>
+  <li><strong>Quantifiers:</strong> Universal (∀), Existential (∃)</li>
+  <li><strong>Domain of Discourse:</strong> The set over which variables range.</li>
+  <li><strong>Example:</strong> ∀x (Human(x) → Mortal(x))</li>
+</ul>
+
+<h2>3. Logical Equivalence and Inference</h2>
+
+<ul>
+  <li><strong>Equivalence:</strong> Two formulas are equivalent if they have the same truth value in all cases.</li>
+  <li><strong>Rules of Inference:</strong> Modus Ponens, Modus Tollens, Hypothetical Syllogism, Disjunctive Syllogism</li>
+  <li><strong>Deductive System:</strong> A set of axioms and inference rules used to derive conclusions.</li>
+</ul>
+
+<h2>4. Proof Techniques</h2>
+
+<h3>Direct Proof</h3>
+<p>Start from known facts and apply logical steps to reach the conclusion.</p>
+
+<h3>Proof by Contradiction</h3>
+<p>Assume the negation of the statement and derive a contradiction.</p>
+
+<h3>Proof by Contrapositive</h3>
+<p>Prove ¬Q → ¬P instead of P → Q.</p>
+
+<h3>Proof by Induction</h3>
+<ul>
+  <li><strong>Base Case:</strong> Prove the statement for the initial value.</li>
+  <li><strong>Inductive Step:</strong> Assume true for n, prove for n+1.</li>
+</ul>
+
+<h3>Structural Induction</h3>
+<p>Used for recursively defined structures like trees or expressions.</p>
+
+<h2>5. Mathematical Logic in CS</h2>
+
+<ul>
+  <li><strong>Formal Verification:</strong> Proving correctness of hardware/software systems.</li>
+  <li><strong>Model Checking:</strong> Automatically verifying properties of finite-state systems.</li>
+  <li><strong>Automated Theorem Proving:</strong> Using algorithms to prove logical statements.</li>
+</ul>
+
+<h2>6. Satisfiability and Decision Procedures</h2>
+
+<h3>Boolean Satisfiability (SAT)</h3>
+<p>Determine if there exists an assignment of truth values that makes a formula true.</p>
+
+<h3>Applications</h3>
+<ul>
+  <li>Constraint solving</li>
+  <li>AI planning</li>
+  <li>Formal verification</li>
+</ul>
+
+<h2>7. Soundness and Completeness</h2>
+
+<ul>
+  <li><strong>Soundness:</strong> All derivable statements are logically valid.</li>
+  <li><strong>Completeness:</strong> All logically valid statements are derivable.</li>
+</ul>
+
+<h2>8. Temporal Logic</h2>
+
+<ul>
+  <li><strong>Used in:</strong> Model checking and reactive systems</li>
+  <li><strong>Operators:</strong> G (always), F (eventually), X (next), U (until)</li>
+  <li><strong>Example:</strong> G(request → F(grant))</li>
+</ul>
+
+<h2>9. Lambda Calculus and Logic</h2>
+
+<ul>
+  <li><strong>Lambda Calculus:</strong> A formal system for function definition and application</li>
+  <li><strong>Connection:</strong> Forms the basis of functional programming and type theory</li>
+</ul>
+
+<h2>10. Applications</h2>
+
+<ul>
+  <li><strong>Programming Languages:</strong> Type systems, semantics</li>
+  <li><strong>Security:</strong> Formal proofs of protocol correctness</li>
+  <li><strong>Databases:</strong> Query languages based on predicate logic</li>
+</ul>
+
+</body>
+</html>
