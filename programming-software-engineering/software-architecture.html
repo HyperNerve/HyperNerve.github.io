@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Software Architecture - Programming & Software Engineering</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Software Architecture</h1>
+<p>Software architecture defines the high-level structure of a software system. It outlines components, their interactions, and design principles that guide system scalability, maintainability, and performance.</p>
+
+<h2>1. Goals of Software Architecture</h2>
+<ul>
+  <li><strong>Scalability:</strong> Handle growth in users and data</li>
+  <li><strong>Maintainability:</strong> Ease of updates and bug fixes</li>
+  <li><strong>Performance:</strong> Efficient resource usage</li>
+  <li><strong>Security:</strong> Protect against vulnerabilities</li>
+</ul>
+
+<h2>2. Architectural Components</h2>
+<ul>
+  <li><strong>Modules:</strong> Encapsulated units of functionality</li>
+  <li><strong>Interfaces:</strong> Define communication between modules</li>
+  <li><strong>Connectors:</strong> Enable interaction (e.g., APIs, message queues)</li>
+</ul>
+
+<h2>3. Common Architectural Styles</h2>
+<ul>
+  <li><strong>Layered:</strong> Presentation, business logic, data access</li>
+  <li><strong>Client-Server:</strong> Clients request services from centralized servers</li>
+  <li><strong>Microservices:</strong> Independent services with isolated responsibilities</li>
+  <li><strong>Event-Driven:</strong> Components react to events asynchronously</li>
+  <li><strong>Service-Oriented Architecture (SOA):</strong> Services communicate via standard protocols</li>
+</ul>
+
+<h2>4. Example: Layered Architecture</h2>
+<pre>
+Presentation Layer → Business Logic Layer → Data Access Layer → Database
+</pre>
+
+<h2>5. Design Patterns in Architecture</h2>
+<ul>
+  <li><strong>Model-View-Controller (MVC):</strong> Separates UI, logic, and data</li>
+  <li><strong>Broker:</strong> Mediates communication between components</li>
+  <li><strong>Pipe-and-Filter:</strong> Data flows through processing stages</li>
+</ul>
+
+<h2>6. Architectural Decisions</h2>
+<ul>
+  <li><strong>Technology Stack:</strong> Languages, frameworks, databases</li>
+  <li><strong>Deployment Strategy:</strong> Monolith vs containers vs serverless</li>
+  <li><strong>Communication Protocols:</strong> REST, gRPC, WebSockets</li>
+</ul>
+
+<h2>7. Quality Attributes</h2>
+<ul>
+  <li><strong>Availability:</strong> System uptime and fault tolerance</li>
+  <li><strong>Modifiability:</strong> Ease of making changes</li>
+  <li><strong>Testability:</strong> Support for automated testing</li>
+</ul>
+
+<h2>8. Architectural Documentation</h2>
+<ul>
+  <li><strong>Views:</strong> Logical, development, process, physical</li>
+  <li><strong>Diagrams:</strong> UML, C4 model, flowcharts</li>
+  <li><strong>ADR (Architectural Decision Record):</strong> Document rationale for decisions</li>
+</ul>
+
+<h2>9. Example: Microservices Architecture</h2>
+<pre>
+Services:
+  - Auth Service
+  - Product Service
+  - Order Service
+Communication:
+  - REST APIs
+  - Message Broker (e.g., RabbitMQ)
+</pre>
+
+<h2>10. Best Practices</h2>
+<ul>
+  <li><strong>Design for Change:</strong> Anticipate evolving requirements</li>
+  <li><strong>Use Abstraction:</strong> Hide complexity behind interfaces</li>
+  <li><strong>Monitor and Log:</strong> Track system health and behavior</li>
+  <li><strong>Review Regularly:</strong> Validate architecture against goals</li>
+</ul>
+
+</body>
+</html>
