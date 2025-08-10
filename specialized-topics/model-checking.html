@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Model Checking - Specialized Topics</title>
+  <meta charset="UTF-8">
+</head>
+<body>
 
+<h1>Model Checking</h1>
+<p>Model Checking is an automated formal verification technique that systematically explores the state space of a system model to verify whether it satisfies a given specification. It is widely used in verifying concurrent systems, protocols, and digital circuits.</p>
+
+<h2>1. Core Concepts</h2>
+<ul>
+  <li><strong>System Model:</strong> Finite-state representation of system behavior</li>
+  <li><strong>Specification:</strong> Desired properties expressed in temporal logic</li>
+  <li><strong>State Space:</strong> All possible configurations of the system</li>
+  <li><strong>Transition System:</strong> Graph of states and transitions</li>
+  <li><strong>Counterexample:</strong> Execution trace violating the specification</li>
+</ul>
+
+<h2>2. Temporal Logic</h2>
+<ul>
+  <li><strong>LTL (Linear Temporal Logic):</strong> Properties over linear sequences of states</li>
+  <li><strong>CTL (Computation Tree Logic):</strong> Properties over branching paths</li>
+  <li><strong>CTL*:</strong> Combines LTL and CTL expressiveness</li>
+  <li>Operators: X (next), G (globally), F (eventually), U (until)</li>
+</ul>
+
+<h2>3. Model Checking Algorithms</h2>
+<ul>
+  <li>Explicit-state model checking (depth-first, breadth-first search)</li>
+  <li>Symbolic model checking using BDDs (Binary Decision Diagrams)</li>
+  <li>Bounded model checking with SAT/SMT solvers</li>
+  <li>Partial-order reduction for concurrent systems</li>
+</ul>
+
+<h2>4. Tools & Frameworks</h2>
+<ul>
+  <li>SPIN (Promela language, LTL specifications)</li>
+  <li>NuSMV and Cadence SMV (symbolic model checking)</li>
+  <li>UPPAAL (real-time systems with timed automata)</li>
+  <li>PRISM (probabilistic model checking)</li>
+  <li>CBMC (bounded model checking for C programs)</li>
+</ul>
+
+<h2>5. Applications</h2>
+<ul>
+  <li>Verification of communication protocols</li>
+  <li>Deadlock detection in concurrent systems</li>
+  <li>Safety and liveness properties in embedded systems</li>
+  <li>Security protocol validation</li>
+  <li>Hardware design verification (e.g., FSMs, circuits)</li>
+</ul>
+
+<h2>6. Specification & Modeling Languages</h2>
+<ul>
+  <li>Promela (SPIN)</li>
+  <li>SMV language (NuSMV)</li>
+  <li>TLA+ for high-level specifications</li>
+  <li>Timed automata for real-time systems</li>
+</ul>
+
+<h2>7. Challenges</h2>
+<ul>
+  <li>State space explosion in large systems</li>
+  <li>Model abstraction and fidelity</li>
+  <li>Expressiveness vs. tractability of specifications</li>
+  <li>Interpreting counterexamples and debugging models</li>
+</ul>
+
+<h2>8. Future Directions</h2>
+<ul>
+  <li>Compositional and modular model checking</li>
+  <li>Integration with runtime verification and testing</li>
+  <li>Probabilistic and statistical model checking</li>
+  <li>AI-guided abstraction and state-space exploration</li>
+</ul>
+
+</body>
+</html>
